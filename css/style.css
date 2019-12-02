@@ -1018,7 +1018,7 @@ footer {
 .main_wraper {
   display: flex;
   width: 100%;
-  height: 600px;
+  height: calc(100vw - 2vh);
 }
 
 .main_wraper img {
@@ -1549,14 +1549,15 @@ footer {
 .main_wraper {
   display: flex;
   width: 100%;
-  height: auto;
-  flex-grow: 1;
+  height: calc(100vw - 5vh);
 }
 
 .main_wraper img {
   display: flex;
   right: 0%;
+  max-width: 100%;
   width: 100%;
+  height: auto;
 }
 
 .main_wraper div {
