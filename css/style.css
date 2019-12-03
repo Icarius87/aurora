@@ -977,13 +977,12 @@ footer {
 
 
   aside {
-    flex-basis: 30%;
     margin: 0%;
   }
 
   aside img {
-    background-color: white;
-    width: 50vw;
+    max-width: 60%;
+    width: 60%;
   }
 
   nav {
@@ -1018,13 +1017,15 @@ footer {
 .main_wraper {
   display: flex;
   width: 100%;
-  height: calc(100vw - 2vh);
+  height: calc(100vw - 1vh);
 }
 
 .main_wraper img {
   display: flex;
   right: 0%;
+  max-width: 100%;
   width: 100%;
+  height: auto;
 }
 
 .main_wraper div {
@@ -1043,27 +1044,27 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 450px;
+  height: 400px;
   flex-direction: column;
 }
 
 .about_me_main {
-
-
   margin-left: 0%;
   width: 100%;
-  height: 100px;
+  height: 150px;
 }
 
 .about_me_main h1 {
-  top: 5%;
-  left: 15%;
+  font-size: 30px;
+    top: 35%;
+    left: 30%;
 }
 
 .about_me_main p {
   vertical-align: initial;
-  top: 10px;
-  left: 10px;
+  top: 35%;
+    left: 40%;
+    font-size: 30px;
   transform: rotate(0deg);
   letter-spacing: 10px;
   position: absolute;
@@ -1074,7 +1075,8 @@ footer {
 }
 
 .about_me_txt {
-  width: 100%;
+  margin-top: 10px;
+  width: 80%;
   transform: translate(0%, 0%);
 }
 
@@ -1095,30 +1097,33 @@ footer {
 
   .galery_wraper {
     width: 100%;
-    height: 1200px;
+    height: auto;
     flex-direction: column;
 
   }
 
   .galery_main {
     width: 100%;
-    height: 300px;
+    height: 170px;
   }
 
   .galery_main h1 {
-    top: 5%;
+    font-size: 30px;
+      top: 10%;
+      left: 30%;
   }
 
   .galery_main p {
     vertical-align: initial;
-    top: 10px;
-    left: 10px;
+    top: 10%;
+      left: 40%;
+      font-size: 30px;
     transform: rotate(0deg);
     letter-spacing: 10px;
   }
 
   .galery_main ul {
-    top: 30%;
+    top: 40%;
     left: 5%;
   }
 
@@ -1126,14 +1131,14 @@ footer {
   .galery_main ul li a {
     display: flex;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 5px;
   }
 
 
   .galery {
     width: 100%;
-    height: 2600px;
+    height: auto;
     flex-wrap: wrap;
     /* flex-direction: column; */
     justify-content: center;
@@ -1155,11 +1160,10 @@ footer {
   .galery_page_3 span,
   .galery_page_4 span {
     display: flex;
-    width: 95vw;
-    height: 55%;
+    width: 80vw;
+    height: 250px;
     margin-top: 5px;
     background-color: #BBBBBB;
-
   }
 
 
@@ -1171,13 +1175,14 @@ footer {
 
   .serwises_wraper {
     width: 100%;
-    height: 1200px;
+    height: auto;
     flex-direction: column-reverse;
+    margin-top: 10px;
   }
 
   .serwises {
     width: 100%;
-    height: 950px;
+    height: auto;
   }
 
   .serwises_main {
@@ -1186,21 +1191,23 @@ footer {
   }
 
   .serwises_main h1 {
-    top: 5%;
-    left: 15%;
+    font-size: 30px;
+    top: 10%;
+    left: 30%;
   }
 
   .serwises_main p {
     vertical-align: initial;
-    top: 1%;
-    left: 15%;
+    top: 10%;
+    left: 40%;
+    font-size: 30px;
     transform: rotate(0deg);
     letter-spacing: 10px;
   }
 
   .serwises_main ul {
     flex-direction: column;
-    top: 30%;
+    top: 35%;
     left: 5%;
   }
 
@@ -1231,7 +1238,7 @@ footer {
     width: 100%;
     text-align: center;
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 12px;
     align-self: center;
   }
 
@@ -1243,10 +1250,11 @@ footer {
   .serwises_page_6 span,
   .serwises_page_7 span {
     font-size: 10px;
-    width: 90%;
+    width: 70%;
     height: 100px;
     padding: 5px;
     line-height: 15px;
+    margin-bottom: 10px;
   }
 
   .serwises_page_1 span h1,
@@ -1256,7 +1264,7 @@ footer {
   .serwises_page_5 span h1,
   .serwises_page_6 span h1,
   .serwises_page_7 span h1 {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 4px;
     width: 100%;
   }
@@ -1268,7 +1276,7 @@ footer {
   .serwises_page_5 span i,
   .serwises_page_6 span i,
   .serwises_page_7 span i {
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 3px;
 
   }
@@ -1287,7 +1295,7 @@ footer {
     margin-top: 5px;
     flex-direction: column;
     width: 100%;
-    height: 700px;
+    height: auto;
 
   }
 
@@ -1300,23 +1308,23 @@ footer {
 
   .price_main h1 {
     font-size: 30px;
-    top: 10px;
-    left: 20%;
+    top: 10%;
+    left: 30%;
   }
 
   .price_main p {
     vertical-align: initial;
     transform: rotate(0deg);
     letter-spacing: 10px;
-    top: 10px;
-    left: 35%;
+    top: 10%;
+    left: 40%;
     font-size: 30px;
   }
 
   .price_main ul {
     position: relative;
-    top: 15px;
-    left: 3%;
+    top: 15%;
+    left: 5%;
   }
 
   .price_main ul li a {
@@ -1340,7 +1348,7 @@ footer {
   .price_page_6,
   .price_page_7 {
     width: 100%;
-    height: 450px;
+    height: auto;
     flex-direction: column;
   }
 
@@ -1351,9 +1359,11 @@ footer {
   .price_page_5 span:nth-child(1),
   .price_page_6 span:nth-child(1),
   .price_page_7 span:nth-child(1) {
-    width: 100%;
-    height: 100px;
+    width: 90%;
+    height: auto;
     margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .price_page_1 span:nth-child(2),
@@ -1363,14 +1373,15 @@ footer {
   .price_page_5 span:nth-child(2),
   .price_page_6 span:nth-child(2),
   .price_page_7 span:nth-child(2) {
-    width: 100%;
-    height: 350px;
+    width: 90%;
+    height: auto;
     margin-left: 0px;
+    margin-bottom: 10px;
   }
 
   .price span ul {
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 15px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1423,7 +1434,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 80px;
     margin-left: 0px;
     margin-top: 0px;
     line-height: 10px;
@@ -1434,18 +1445,18 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 5px;
-    height: 5%;
+    height: 80px;
     line-height: 10px;
   }
 
   .footer_price h1 {
-    font-size: 10px;
+    font-size: 15px;
     margin-bottom: 5px;
     letter-spacing: 2px;
   }
 
   .footer_price ul {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .footer_email {
@@ -1710,14 +1721,15 @@ footer {
 
 
   .serwises_wraper {
+    margin-top: 15px;
     width: 100%;;
-    height: 1600px;
+    height: auto;
     flex-direction: column-reverse;
   }
 
   .serwises {
     width: 100%;
-    height: 1300px;
+    height: auto;
   }
 
   .serwises_main {
@@ -1785,7 +1797,7 @@ footer {
   .serwises_page_7 span {
     font-size: 12px;
     width: 70%;
-    height: 10vh;
+    height: 130px;
     padding: 5px;
     line-height: 15px;
     margin-bottom: 10px;
@@ -1829,7 +1841,7 @@ footer {
     margin-top: 5px;
     flex-direction: column;
     width: 100%;
-    height: 700px;
+    height: auto;
 
   }
 
@@ -1883,7 +1895,7 @@ footer {
   .price_page_6,
   .price_page_7 {
     width: 100%;
-    height: 450px;
+    height: auto;
     flex-direction: column;
   }
 
@@ -1895,8 +1907,10 @@ footer {
   .price_page_6 span:nth-child(1),
   .price_page_7 span:nth-child(1) {
     width: 90%;
-    height: 100px;
+    height: auto;
     margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .price_page_1 span:nth-child(2),
@@ -1907,13 +1921,14 @@ footer {
   .price_page_6 span:nth-child(2),
   .price_page_7 span:nth-child(2) {
     width: 90%;
-    height: 350px;
+    height: auto;
     margin-left: 0px;
+    margin-bottom: 10px;
   }
 
   .price span ul {
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 0px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1967,7 +1982,7 @@ footer {
     align-items: center;
     height: 100px;
     margin-left: 0px;
-    margin-top: 5px;
+    margin-top: 0px;
     line-height: 20px;
   }
 
