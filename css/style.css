@@ -54,6 +54,7 @@ aside {
 
 aside img {
   background-color: white;
+  max-width: 100%;
   width: 100%;
 }
 
@@ -150,7 +151,9 @@ nav ul li a i {
   display: flex;
   position: relative;
   background-color: white;
-  height: 90vh;
+  min-height: 80vh;
+  max-height: 90vh;
+  height: 100%;
   color: black;
 }
 
@@ -219,7 +222,7 @@ nav ul li a i {
   display: flex;
   background-color: #252525;
   margin-left: 1%;
-  width: 30vw;
+  width: 25vw;
   height: 100%;
 }
 
@@ -239,7 +242,7 @@ nav ul li a i {
   display: flex;
   background-color: #DFDFDF;
   height: 60vh;
-  width: 60vh;
+  width: 50vh;
   transform: translate(-35%, 0%);
   overflow: hidden;
 }
@@ -262,7 +265,7 @@ nav ul li a i {
 
 .about_me_txt p {
   text-align: left;
-  width: 100%;
+  width: 70%;
   font-size: 18px;
   text-transform: none;
   color: #BBBBBB;
@@ -484,7 +487,8 @@ nav ul li a i {
 .serwises_page_7 h1 {
   height: 5vh;
   width: 50vw;
-  font-size: 16px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .serwises_page_1 span,
@@ -496,7 +500,7 @@ nav ul li a i {
 .serwises_page_7 span {
   display: flex;
   font-size: 14px;
-  width: 26%;
+  width: 30%;
   height: 25%;
   background-color: #BBBBBB;
   padding: 15px;
@@ -519,7 +523,8 @@ nav ul li a i {
   color: #d86232;
   margin-bottom: 4px;
   border-bottom: 1px solid #d86232;
-  width: 100%
+  width: 100%;
+  text-align: left;
 }
 
 .serwises_page_1 span i,
@@ -690,6 +695,7 @@ nav ul li a i {
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
+  
 }
 
 .price_page_1 span:nth-child(1),
@@ -700,8 +706,8 @@ nav ul li a i {
 .price_page_6 span:nth-child(1),
 .price_page_7 span:nth-child(1) {
   display: flex;
-  width: 30vh;
-  height: 70vh;
+  width: 27%;
+  height: 75vh;
   border: 1px solid #BBBBBB;
   margin-left: 20px;
 }
@@ -714,8 +720,9 @@ nav ul li a i {
 .price_page_6 span:nth-child(2),
 .price_page_7 span:nth-child(2) {
   display: flex;
-  width: 80vh;
-  height: 70vh;
+  min-width: 40vh;
+  width: 65%;
+  height: 75vh;
   border: 1px solid #BBBBBB;
   margin-left: 20px;
 }
@@ -927,10 +934,6 @@ footer {
   transform: scale(2, 2);
   transition: ease .5s;
 }
-
-/*************************************/
-/*****ELEMENTY HTML*******************/
-/*************************************/
 
 @media all and (max-width: 590px) {
   body {
@@ -1475,10 +1478,6 @@ footer {
   }
 
 }
-
-/*************************************/
-/*****komórka 2*******************/
-/*************************************/
 
 @media all and (min-width: 591px) and (max-width: 785px) {
 
@@ -2025,8 +2024,6 @@ footer {
   }
 }
 
-
-
 @media all and (min-width: 786px) and (max-width: 1069px) {
   body {
     width: 100vw;
@@ -2051,8 +2048,9 @@ footer {
   /************************/
 
   .main_wraper {
-    min-height: 50vh;
-    height: calc(100vw - 50vh);
+    min-height: 55vh;
+    max-height: 60vh;
+    height: 100%;
   }
 
   .main_wraper img {
@@ -2090,24 +2088,26 @@ footer {
 
   .about_me_wraper {
     width: 100%;
-    height: 70vh;
+    height: 65vh;
   }
 
   .about_me_main {
     margin-left: 1%;
-    width: 30vw;
+    width: 20vw;
     height: 100%;
   }
 
 
   .about_me_main p {
     top: 15%;
-    left: -20%;
+    left: -25%;
+    font-size: 30px;
   }
 
   .about_me_img {
-    width: 40vh;
-    transform: translate(-30%, 0%);
+    width: 30vh;
+    height: 90%;
+    transform: translate(-25%, 0%);
   }
 
   .about_me_img img {
@@ -2116,7 +2116,8 @@ footer {
   }
 
   .about_me_txt p {
-    font-size: 17px;
+    font-size: 15px;
+    width: 70%;
   }
 
   .about_me_txt h1 {
@@ -2265,7 +2266,7 @@ footer {
   .price_page_5 span:nth-child(1),
   .price_page_6 span:nth-child(1),
   .price_page_7 span:nth-child(1) {
-    width: 30%;
+    width: 25%;
     height: 75vh;
     margin-left: 10px;
   }
@@ -2279,7 +2280,7 @@ footer {
   .price_page_7 span:nth-child(2) {
     display: flex;
   
-    width: 65%;
+    width: 63%;
     height: 75vh;
     margin-left: 10px;
   }
@@ -2416,7 +2417,9 @@ footer {
   /************************/
 
   .main_wraper {
-    height: calc(100vw - 55vh);
+    min-height: 65vh;
+    max-height: 75vh;
+    height: 100%;
   }
 
   .main_wraper img {
@@ -2459,7 +2462,7 @@ footer {
 
   .about_me_main {
     margin-left: 1%;
-    width: 30vw;
+    width: 20vw;
     height: 100%;
   }
 
@@ -2470,7 +2473,7 @@ footer {
   }
 
   .about_me_img {
-    width: 40vh;
+    width: 30vh;
     transform: translate(-30%, 0%);
   }
 
@@ -2481,6 +2484,7 @@ footer {
 
   .about_me_txt p {
     font-size: 17px;
+    width: 70%;
   }
 
   .about_me_txt h1 {
@@ -2781,8 +2785,9 @@ footer {
   /************************/
 
   .main_wraper {
-    min-height: 50vh;
-    height: calc(100vw - 70vh);
+    min-height: 75vh;
+    max-height: 85vh;
+    height: 100%;
   }
 
   .main_wraper img {
@@ -2825,7 +2830,7 @@ footer {
 
   .about_me_main {
     margin-left: 1%;
-    width: 30vw;
+    width: 20vw;
     height: 100%;
   }
 
@@ -2836,17 +2841,18 @@ footer {
   }
 
   .about_me_img {
-    width: 40vh;
-    transform: translate(-30%, 0%);
+    width: 35vh;
+    transform: translate(-35%, 0%);
   }
 
   .about_me_img img {
-    width: 160%;
-    transform: translate(-15%, 0%);
+    width: 150%;
+    transform: translate(-13%, 0%);
   }
 
   .about_me_txt p {
     font-size: 17px;
+    width: 70%;
   }
 
   .about_me_txt h1 {
@@ -3120,6 +3126,369 @@ footer {
   }
 }
 
+@media all and (min-width: 1408px) and (max-width: 1570px) {
+
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+  nav {
+    flex-basis: 50vw;
+  }
+
+  /************************/
+  /*****STRONA GŁÓWNA******/
+  /************************/
+
+  .main_wraper {
+    min-height: 80vh;
+    max-height: 85vh;
+    height: 100%;
+  }
+
+  .main_wraper img {
+    max-width: 100%;
+  }
+
+  .main_wraper div {
+    width: 40vw;
+    height: 370px;
+    left: 50%;
+  }
+
+  .main_wraper_text h1 {
+    transform: translate(-50%, 20%);
+  }
+
+  .main_wraper h1 :nth-child(1) {
+    font-size: 35px;
+  }
+
+  .main_wraper h1 :nth-child(2) {
+    transform: translate(40%, 0%);
+    font-size: 45px;
+  }
+
+  .main_wraper h1 :nth-child(3) {
+    margin-top: 20px;
+    font-size: 60px;
+  }
+
+  /************************/
+  /*********O MNIE*********/
+  /************************/
+
+
+  .about_me_wraper {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
+
+
+  .about_me_main p {
+    top: 15%;
+    left: -10%;
+  }
+
+  .about_me_img {
+    width: 40vh;
+    transform: translate(-40%, 0%);
+  }
+
+  .about_me_img img {
+    width: 150%;
+    transform: translate(-13%, 10%);
+  }
+
+  .about_me_txt p {
+    font-size: 17px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+
+  /************************/
+  /********GALERIA*********/
+  /************************/
+
+
+  .galery_main p {
+    top: 15%;
+    left: -10%;
+  }
+
+  .galery_main ul {
+    top: 40%;
+    left: 10%;
+  }
+
+  .galery_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  /************************/
+  /*********USŁUGI*********/
+  /************************/
+
+
+  .serwises_main p {
+    top: 15%;
+    left: -10%;
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 20px;
+
+   
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+
+  /************************/
+  /*********CENNIK*********/
+  /************************/
+
+  .price_wraper {
+    margin-top: 0%;
+  }
+
+  .price_main p {
+    top: 15%;
+    left: -10%;
+  }
+
+  .price_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .price_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .price {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+  }
+
+
+  .price_page_1 span:nth-child(1),
+  .price_page_2 span:nth-child(1),
+  .price_page_3 span:nth-child(1),
+  .price_page_4 span:nth-child(1),
+  .price_page_5 span:nth-child(1),
+  .price_page_6 span:nth-child(1),
+  .price_page_7 span:nth-child(1) {
+    width: 30%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price_page_1 span:nth-child(2),
+  .price_page_2 span:nth-child(2),
+  .price_page_3 span:nth-child(2),
+  .price_page_4 span:nth-child(2),
+  .price_page_5 span:nth-child(2),
+  .price_page_6 span:nth-child(2),
+  .price_page_7 span:nth-child(2) {
+    display: flex;
+    min-width: 40vh;
+    width: 65%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price span ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price span ul li {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+
+
+  .price span i {
+    font-size: 25px;
+  }
+
+  .price span a {
+    margin-top: 10%;
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  /************************/
+  /********STOPKA**********/
+  /************************/
+
+  footer {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+  }
+
+
+  .footer_adress {
+
+    margin-left: 10px;
+    margin-top: 15px;
+    line-height: 20px;
+    flex-basis: 20%;
+    height: auto;
+    text-align: left;
+  }
+
+  .footer_price {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    height: auto;
+    margin: 10px;
+    line-height: 24px;
+  }
+
+  .footer_price h1 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+
+  .footer_price ul {
+    text-align: left;
+    font-size: 12px;
+
+  }
+
+  .footer_email {
+    flex-basis: 30%;
+    margin: 10px 20px 0px 20px;
+    line-height: 20px;
+    height: auto;
+  }
+
+  .footer_email div {
+    margin-top: 40px;
+    letter-spacing: 25px;
+  }
+
+  .footer_email i {
+    font-size: 60px;
+  }
+
+  .footer_email a[Alt_title]:after {
+    font-size: 10px;
+    padding: 2px 4px 2px 8px;
+    bottom: -1.6em;
+    letter-spacing: 3px;
+    left: -150%;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+  }
+
+  .footer_allrights {
+    height: auto;
+  }
+
+  .footer_map {
+    flex-basis: 30%;
+    height: auto;
+  }
+}
 
 
 /* 1050px (komputer)
