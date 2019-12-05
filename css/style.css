@@ -20,9 +20,6 @@ body {
   color: black;
   text-transform: uppercase;
   background-color: white;
-  /* background-image: url("bg.jpg");
-    background-position: center; 
-    background-size: cover ; */
   text-align: center;
   align-items: center;
 }
@@ -993,9 +990,9 @@ footer {
 
   .main_wraper {
     display: flex;
-    min-height: 60vh;
-    max-height: 100vh;
-    height: calc(100vw - 10vh);
+    min-height: 75vw;
+    max-height: 100vw;
+    height: calc(100vw - 2vh);
   }
 
   .main_wraper img {
@@ -1538,9 +1535,9 @@ footer {
 
   .main_wraper {
     display: flex;
-    min-height: 60vh;
-    max-height: 70vh;
-    height: calc(50vw - 10vh);
+    min-height: 75vw;
+    max-height: 100vw;
+    height: calc(100vw - 2vh);
   }
 
   .main_wraper img {
