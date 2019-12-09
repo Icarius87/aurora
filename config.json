@@ -59,6 +59,12 @@
       "css": "dollar",
       "code": 61781,
       "src": "fontawesome"
+    },
+    {
+      "uid": "dfec4ffa849d8594c2e4b86f6320b8a6",
+      "css": "angle-double-down",
+      "code": 61699,
+      "src": "fontawesome"
     }
   ]
 }

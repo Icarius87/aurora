@@ -936,7 +936,8 @@ footer {
   transition: ease .5s;
 }
 
-@media all and (max-width: 590px) {
+
+@media all and (max-width: 590px)  {
   body {
     width: 100%;
     font-size: 6px;
@@ -945,27 +946,28 @@ footer {
 
   main {
     flex-direction: column;
-    height: 15vh;
+    height: 10vh;
   }
 
-  section {
-    width: 100%;
-  }
+  
+section {
+  width: 100%;
+}
 
   aside {
     margin: 0%;
   }
 
   aside img {
-    max-width: 60%;
-    width: 60%;
+    max-width: 50%;
+    width: 50%;
   }
 
   .hamburger {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 25px;
     }
 
   nav {
@@ -974,17 +976,19 @@ footer {
     justify-content: center;
     margin-left: 0%;
     width: 100%;
-    top: -270px;;
+    top: -270px;
     align-items: center;
     transition: .2s linear;
+    z-index: -10;
   }
 
   .hamburger.on {
-    transform: rotate(180deg);
+    transform: rotate(540deg);
     }
 
   nav.on {
-    top: 2vh;
+    top: 0px;
+    z-index: -10;
   }
 
   nav ul {
@@ -1039,18 +1043,18 @@ footer {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 400px;
+    height: 450px;
     flex-direction: column;
   }
 
   .about_me_main {
     margin-left: 0%;
     width: 100%;
-    height: 150px;
+    height: 500px;
   }
 
   .about_me_main h1 {
-    font-size: 30px;
+    font-size: 40px;
     top: 35%;
     left: 30%;
   }
@@ -1059,10 +1063,9 @@ footer {
     vertical-align: initial;
     top: 35%;
     left: 40%;
-    font-size: 30px;
+    font-size: 40px;
     transform: rotate(0deg);
     letter-spacing: 10px;
-    position: absolute;
   }
 
   .about_me_img {
@@ -1078,13 +1081,14 @@ footer {
   .about_me_txt p {
     margin-top: 10px;
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .about_me_txt h1 {
     font-size: 0px;
     margin: 10px;
   }
+
 
   /************************/
   /********GALERIA*********/
@@ -1099,11 +1103,11 @@ footer {
 
   .galery_main {
     width: 100%;
-    height: 170px;
+    height: 200px;
   }
 
   .galery_main h1 {
-    font-size: 30px;
+    font-size: 40px;
     top: 10%;
     left: 30%;
   }
@@ -1112,10 +1116,11 @@ footer {
     vertical-align: initial;
     top: 10%;
     left: 40%;
-    font-size: 30px;
+    font-size: 40px;
     transform: rotate(0deg);
     letter-spacing: 10px;
   }
+
 
   .galery_main ul {
     top: 40%;
@@ -1126,7 +1131,7 @@ footer {
   .galery_main ul li a {
     display: flex;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 5px;
   }
 
@@ -1156,9 +1161,10 @@ footer {
   .galery_page_4 span {
     display: flex;
     width: 80vw;
-    height: 250px;
+    height: 300px;
     margin-top: 5px;
     background-color: #BBBBBB;
+
   }
 
 
@@ -1169,10 +1175,11 @@ footer {
 
 
   .serwises_wraper {
+    margin-top: 15px;
     width: 100%;
+    ;
     height: auto;
     flex-direction: column-reverse;
-    margin-top: 10px;
   }
 
   .serwises {
@@ -1182,11 +1189,11 @@ footer {
 
   .serwises_main {
     width: 100%;
-    height: 200px;
+    height: 230px;
   }
 
   .serwises_main h1 {
-    font-size: 30px;
+    font-size: 40px;
     top: 10%;
     left: 30%;
   }
@@ -1195,7 +1202,7 @@ footer {
     vertical-align: initial;
     top: 10%;
     left: 40%;
-    font-size: 30px;
+    font-size: 40px;
     transform: rotate(0deg);
     letter-spacing: 10px;
   }
@@ -1206,9 +1213,8 @@ footer {
     left: 5%;
   }
 
-
   .serwises_main ul li a {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 5px;
   }
 
@@ -1233,7 +1239,7 @@ footer {
     width: 100%;
     text-align: center;
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 14px;
     align-self: center;
   }
 
@@ -1244,9 +1250,9 @@ footer {
   .serwises_page_5 span,
   .serwises_page_6 span,
   .serwises_page_7 span {
-    font-size: 10px;
+    font-size: 12px;
     width: 70%;
-    height: 100px;
+    height: 130px;
     padding: 5px;
     line-height: 15px;
     margin-bottom: 10px;
@@ -1259,7 +1265,7 @@ footer {
   .serwises_page_5 span h1,
   .serwises_page_6 span h1,
   .serwises_page_7 span h1 {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 4px;
     width: 100%;
   }
@@ -1271,7 +1277,7 @@ footer {
   .serwises_page_5 span i,
   .serwises_page_6 span i,
   .serwises_page_7 span i {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 3px;
 
   }
@@ -1296,13 +1302,13 @@ footer {
 
   .price_main {
     width: 100%;
-    height: 200px;
+    height: 250px;
     margin-left: 0;
     flex-direction: row;
   }
 
   .price_main h1 {
-    font-size: 30px;
+    font-size: 40px;
     top: 10%;
     left: 30%;
   }
@@ -1313,8 +1319,9 @@ footer {
     letter-spacing: 10px;
     top: 10%;
     left: 40%;
-    font-size: 30px;
+    font-size: 40px;
   }
+
 
   .price_main ul {
     position: relative;
@@ -1323,7 +1330,7 @@ footer {
   }
 
   .price_main ul li a {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 5px;
   }
 
@@ -1376,7 +1383,7 @@ footer {
 
   .price span ul {
     margin-top: 10px;
-    margin-left: 15px;
+    margin-left: 0px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1385,7 +1392,7 @@ footer {
 
   .price span ul li {
     margin-left: 0px;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 2px;
     line-height: 20px;
   }
@@ -1397,12 +1404,12 @@ footer {
     width: 0px;
     border-radius: 0%;
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 20px;
   }
 
   .price span a {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 15px;
   }
 
@@ -1411,12 +1418,11 @@ footer {
   /************************/
 
   footer {
-
     background-color: black;
     height: auto;
     width: 100%;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 14px;
 
   }
 
@@ -1429,10 +1435,10 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 100px;
     margin-left: 0px;
     margin-top: 0px;
-    line-height: 10px;
+    line-height: 20px;
   }
 
   .footer_price {
@@ -1440,18 +1446,19 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 5px;
-    height: 80px;
+    height: 100px;
     line-height: 10px;
   }
 
   .footer_price h1 {
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 5px;
     letter-spacing: 2px;
   }
 
   .footer_price ul {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 15px;
   }
 
   .footer_email {
@@ -1468,7 +1475,7 @@ footer {
   }
 
   .footer_email i {
-    font-size: 30px;
+    font-size: 50px;
   }
 
   .footer_email a[Alt_title]:after {
@@ -1494,7 +1501,6 @@ footer {
     justify-items: center;
     width: 85%;
   }
-
 }
 
 @media all and (min-width: 591px) and (max-width: 785px) {
@@ -1521,14 +1527,14 @@ section {
 
   aside img {
     max-width: 50%;
-    width: 500%;
+    width: 50%;
   }
 
   .hamburger {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 25px;
     }
 
   nav {
@@ -1537,17 +1543,19 @@ section {
     justify-content: center;
     margin-left: 0%;
     width: 100%;
-    top: -270px;;
+    top: -270px;
     align-items: center;
-    transition: .2s linear;;
+    transition: .2s linear;
+    z-index: -10;
   }
 
   .hamburger.on {
-    transform: rotate(180deg);
+    transform: rotate(540deg);
     }
 
   nav.on {
-    top: 2vh;
+    top: 0px;
+    z-index: -10;
   }
 
   nav ul {
