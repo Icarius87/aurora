@@ -154,13 +154,22 @@ nav ul li a i {
   display: flex;
   position: relative;
   background-color: white;
-  min-height: 80vh;
-  max-height: 90vh;
-  height: 100%;
+  height: 85vh;
   color: black;
 }
 
-.main_wraper img {
+.main_img{
+  display: flex;
+  position: absolute;
+  right: 2%;
+  top: 0;
+  width: 40vw;
+  height: 40vw;
+  background-color: grey;
+  z-index: 2;
+}
+
+/* .main_wraper img {
   display: flex;
   position: absolute;
   right: 2%;
@@ -169,15 +178,14 @@ nav ul li a i {
   height: auto;
   z-index: 2;
   justify-content: center;
-}
+} */
 
 .main_wraper div {
   position: absolute;
   border: solid #d86232 15px;
   background-color: transparent;
   width: 40%;
-  height: 375px;
-  min-height: 500;
+  height: 45%;
   left: 50%;
   transform: translate(-50%, 40%);
   z-index: 1;
@@ -187,7 +195,7 @@ nav ul li a i {
   display: flex;
   flex-direction: column;
   text-align: start;
-  transform: translate(-50%, 40%);
+  transform: translate(-55%, 40%);
 }
 
 .main_wraper h1 :nth-child(1) {
@@ -946,7 +954,7 @@ footer {
 
   main {
     flex-direction: column;
-    height: 10vh;
+    height: 80px;
   }
 
   
@@ -1014,18 +1022,22 @@ section {
 
   .main_wraper {
     display: flex;
-    min-height: 75vw;
-    max-height: 100vw;
-    height: calc(100vw - 2vh);
+    height: calc(100vw - 2vh)
   }
 
-  .main_wraper img {
+  .main_img{
+    width: 100vw;
+    height: 100vw;
+    right: 0;
+     }
+
+  /* .main_wraper img {
     display: flex;
     right: 0%;
     max-width: 100%;
     width: 100%;
     height: auto;
-  }
+  } */
 
   .main_wraper div {
     display: none;
@@ -1513,7 +1525,7 @@ section {
 
   main {
     flex-direction: column;
-    height: 15vh;
+    height: 100px;
   }
 
   
@@ -1581,18 +1593,22 @@ section {
 
   .main_wraper {
     display: flex;
-    min-height: 75vw;
-    max-height: 100vw;
-    height: calc(100vw - 2vh);
+    height: calc(100vw - 5vh)
   }
 
-  .main_wraper img {
+  .main_img{
+    width: 100vw;
+    height: 100vw;
+    right: 0;
+     }
+
+  /* .main_wraper img {
     display: flex;
     right: 0%;
     max-width: 100%;
     width: 100%;
     height: auto;
-  }
+  } */
 
   .main_wraper div {
     display: none;
@@ -1610,14 +1626,14 @@ section {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 450px;
+    height: auto;
     flex-direction: column;
   }
 
   .about_me_main {
     margin-left: 0%;
     width: 100%;
-    height: 500px;
+    height: 20vh;
   }
 
   .about_me_main h1 {
@@ -2093,36 +2109,41 @@ section {
   /************************/
 
   .main_wraper {
-    min-height: 55vh;
-    max-height: 60vh;
-    height: 100%;
+    height: 50vh;
   }
 
-  .main_wraper img {
+  .main_img{
+    width: 40vw;
+       height: 40vw;
+     }
+
+  /* .main_wraper img {
     max-width: 100%;
-  }
+  } */
 
   .main_wraper div {
-    width: 40vw;
-    height: 230px;
+    width: 40%;
+    height: 40%;
     left: 50%;
+    transform: translate(-40%, 40%);
+    
   }
 
   .main_wraper_text h1 {
-    transform: translate(-60%, 10%);
+    transform: translate(-70%, 10%);
   }
 
   .main_wraper h1 :nth-child(1) {
-    font-size: 25px;
+    font-size: 15px;
   }
 
   .main_wraper h1 :nth-child(2) {
     transform: translate(40%, 0%);
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .main_wraper h1 :nth-child(3) {
-    margin-top: 15px;
+    margin-top: 18px;
     font-size: 50px;
   }
 
@@ -2462,37 +2483,42 @@ section {
   /************************/
 
   .main_wraper {
-    min-height: 65vh;
-    max-height: 75vh;
-    height: 100%;
+    height: 60vh;
   }
 
-  .main_wraper img {
+  .main_img{
+    width: 40vw;
+       height: 40vw;
+     }
+
+  /* .main_wraper img {
     max-width: 100%;
-  }
+  } */
 
   .main_wraper div {
-    width: 40vw;
-    height: 270px;
+    width: 40%;
+    height: 40%;
     left: 50%;
+    transform: translate(-40%, 40%);
+    
   }
 
   .main_wraper_text h1 {
-    transform: translate(-50%, 10%);
+    transform: translate(-60%, 20%);
   }
 
   .main_wraper h1 :nth-child(1) {
-    font-size: 30px;
+    font-size: 15px;
   }
 
   .main_wraper h1 :nth-child(2) {
     transform: translate(40%, 0%);
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .main_wraper h1 :nth-child(3) {
     margin-top: 18px;
-    font-size: 55px;
+    font-size: 65px;
   }
 
   /************************/
@@ -2830,37 +2856,42 @@ section {
   /************************/
 
   .main_wraper {
-    min-height: 75vh;
-    max-height: 85vh;
-    height: 100%;
+    height: 70vh;
   }
 
-  .main_wraper img {
+  /* .main_wraper img {
     max-width: 100%;
+  } */
+
+  .main_img{
+
+    width: 40vw;
+    height: 40vw;
   }
 
   .main_wraper div {
-    width: 40vw;
-    height: 310px;
+    width: 40%;
+    height: 50%;
     left: 50%;
+    transform: translate(-40%, 25%);
   }
 
   .main_wraper_text h1 {
-    transform: translate(-50%, 20%);
+    transform: translate(-55%, 40%);
   }
 
   .main_wraper h1 :nth-child(1) {
-    font-size: 35px;
+    font-size: 25px;
   }
 
   .main_wraper h1 :nth-child(2) {
     transform: translate(40%, 0%);
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .main_wraper h1 :nth-child(3) {
     margin-top: 20px;
-    font-size: 60px;
+    font-size: 70px;
   }
 
   /************************/
@@ -3195,39 +3226,46 @@ section {
   /************************/
 
   .main_wraper {
-    min-height: 80vh;
-    max-height: 85vh;
-    height: 100%;
+    height: 75vh;
   }
 
-  .main_wraper img {
-    max-width: 100%;
+  .main_img{
+ width: 40vw;
+    height: 40vw;
   }
+
+  /* .main_wraper img {
+    max-width: 100%;
+  } */
 
   .main_wraper div {
-    width: 40vw;
-    height: 370px;
+    width: 40%;
+    height: 50%;
     left: 50%;
+    transform: translate(-40%, 40%);
+    
   }
 
   .main_wraper_text h1 {
-    transform: translate(-50%, 20%);
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    transform: translate(-55%, 40%);
   }
-
+  
   .main_wraper h1 :nth-child(1) {
-    font-size: 35px;
+    font-size: 25px;
   }
-
+  
   .main_wraper h1 :nth-child(2) {
     transform: translate(40%, 0%);
     font-size: 45px;
   }
-
+  
   .main_wraper h1 :nth-child(3) {
     margin-top: 20px;
-    font-size: 60px;
+    font-size: 75px;
   }
-
   /************************/
   /*********O MNIE*********/
   /************************/
