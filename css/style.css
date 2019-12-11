@@ -156,13 +156,11 @@ nav ul li a i {
   background-color: white;
   height: 85vh;
   color: black;
+  justify-content: flex-end;
 }
 
 .main_img{
   display: flex;
-  position: absolute;
-  right: 2%;
-  top: 0;
   width: 40vw;
   height: 40vw;
   background-color: grey;
@@ -939,12 +937,6 @@ footer {
   transform-origin: bottom;
 }
 
-.footer_map img:hover {
-  transform: scale(2, 2);
-  transition: ease .5s;
-}
-
-
 @media all and (max-width: 590px)  {
   body {
     width: 100%;
@@ -974,8 +966,8 @@ section {
   .hamburger {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    font-size: 25px;
+    margin-top: 0px;
+    font-size: 20px;
     }
 
   nav {
@@ -1022,7 +1014,8 @@ section {
 
   .main_wraper {
     display: flex;
-    height: calc(100vw - 2vh)
+    height: auto;
+    min-height: 120px;
   }
 
   .main_img{
@@ -1055,14 +1048,15 @@ section {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 450px;
+    height: auto;
     flex-direction: column;
   }
 
   .about_me_main {
     margin-left: 0%;
     width: 100%;
-    height: 500px;
+    min-height: 20vh;
+    height: auto;
   }
 
   .about_me_main h1 {
@@ -1487,22 +1481,52 @@ section {
   }
 
   .footer_email i {
-    font-size: 50px;
+    font-size: 40px;
   }
 
-  .footer_email a[Alt_title]:after {
-    font-size: 10px;
+   .footer_email a[Alt_title]:after {
+    display: none;
   }
 
   .footer_email a[alt_title] {
-    position: relative;
-  }
+    display: none;
+  } 
 
   .footer_allrights {
     background-color: black;
     height: auto;
     margin: 10px 10px 5px 10px;
   }
+  
+  .footer_email_phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 4px;
+    height: 10vh;
+    text-align: left;
+   justify-content: center;
+   
+  }
+
+  
+  .footer_email_phone i {
+   color: white;
+   list-style-type: none;
+   text-decoration: none;
+   font-size: 15px;
+   margin-left: 5vw;
+   margin-right: 10px;
+   margin-bottom: 10px;
+  }
+
+  .footer_email_phone a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing:2px ;
+    margin-bottom: 3px;
+   }
 
   .footer_map {
     margin-top: 10px;
@@ -1545,7 +1569,7 @@ section {
   .hamburger {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 25px;
     }
 
@@ -1593,7 +1617,8 @@ section {
 
   .main_wraper {
     display: flex;
-    height: calc(100vw - 5vh)
+    height: auto;
+    min-height: 120px;
   }
 
   .main_img{
@@ -2060,19 +2085,49 @@ section {
     font-size: 50px;
   }
 
-  .footer_email a[Alt_title]:after {
-    font-size: 10px;
+   .footer_email a[Alt_title]:after {
+    display: none;
   }
 
   .footer_email a[alt_title] {
-    position: relative;
-  }
+    display: none;
+  } 
 
   .footer_allrights {
     background-color: black;
     height: auto;
     margin: 10px 10px 5px 10px;
   }
+
+  .footer_email_phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 4px;
+    height: 10vh;
+    text-align: left;
+   justify-content: center;
+   
+  }
+
+  
+  .footer_email_phone i {
+   color: white;
+   list-style-type: none;
+   text-decoration: none;
+   font-size: 25px;
+   margin-left: 5vw;
+   margin-right: 10px;
+   margin-bottom: 10px;
+  }
+
+  .footer_email_phone a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing:2px ;
+    margin-bottom: 3px;
+   }
 
   .footer_map {
     margin-top: 10px;
@@ -2451,6 +2506,8 @@ section {
   .footer_allrights {
     height: auto;
   }
+
+  
 
   .footer_map {
     flex-basis: 30%;
