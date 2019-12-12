@@ -1,796 +1,4253 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>AURORA Mobilny Gabinet Kosmeyczny</title>
-  <link rel="stylesheet" href="css/fontello.css" type="text/css" />
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
-  <style>
-  </style>
-</head>
+h2{
+  margin: 0;
+  padding: 0;
+}
 
-<body id="main">
-  <main>
-    <aside>
+/************************/
+/*****ELEMENTY HTML******/
+/************************/
+
+body {
+  position: relative;
+  display: flex;
+  width: 1571px;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 40px;
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  width: 90%;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  flex-grow: 1;
+  background-color: white;
+  justify-items: center;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  overflow: hidden;
+}
+
+aside {
+  background-color: white;
+  flex-basis: 15%;
+  margin: 1%;
+}
+
+aside img {
+  background-color: white;
+  max-width: 100%;
+  width: 100%;
+}
+
+.hamburger{
+display: none;
+}
+
+.altLogo {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  background-color: white;
+  margin-left: 15%;
+  align-items: center;
+}
+
+/************************/
+/*******NAWIGACJA********/
+/************************/
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+nav ul li {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  overflow: hidden;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 100%;
+}
+
+nav ul li ::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background-color: #d86232;
+  opacity: 0;
+  transition: ease .5s;
+}
+
+nav ul li :hover::before {
+  left: 40%;
+  opacity: 1;
+}
+
+nav ul li ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: #d86232;
+  opacity: 0;
+  transition: ease .5s;
+}
+
+nav ul li :hover::after {
+  right: 40%;
+  opacity: 1;
+}
+
+nav ul li a:hover {
+  color: #d86232;
+}
+
+nav ul li a i {
+  font-size: 0px;
+}
+
+
+/************************/
+/*****STRONA GŁÓWNA******/
+/************************/
+
+.main_wraper {
+  display: flex;
+  position: relative;
+  background-color: white;
+  min-height: 900px ;
+  height: 90vh;
+  color: black;
+  justify-content: flex-end;
+}
+
+.main_img{
+  display: flex;
+  width: 40vw;
+  height: 40vw;
+  background-color: grey;
+  z-index: 2;
+}
+
+/* .main_wraper img {
+  display: flex;
+  position: absolute;
+  right: 2%;
+  top: 0;
+  width: 50%;
+  height: auto;
+  z-index: 2;
+  justify-content: center;
+} */
+
+.main_wraper div {
+  position: absolute;
+  border: solid #d86232 15px;
+  background-color: transparent;
+  width: 40%;
+  height: 45%;
+  left: 50%;
+  transform: translate(-50%, 40%);
+  z-index: 1;
+}
+
+.main_wraper_text h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  transform: translate(-55%, 40%);
+}
+
+.main_wraper h1 :nth-child(1) {
+  font-size: 30px;
+}
+
+.main_wraper h1 :nth-child(2) {
+  transform: translate(30%, 0%);
+  font-size: 50px;
+}
+
+.main_wraper h1 :nth-child(3) {
+  margin-top: 20px;
+  font-size: 80px;
+}
+
+/************************/
+/*********O MNIE*********/
+/************************/
+
+#about_me {
+  display: flex;
+}
+
+.about_me_wraper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 70vh;
+  color: #3C3C3C;
+  z-index: 90;
+  justify-content: flex-start;
+  align-self: flex-end;
+
+}
+
+.about_me_main {
+  position: relative;
+  display: flex;
+  background-color: #252525;
+  margin-left: 1%;
+  width: 25vw;
+  height: 100%;
+}
+
+.about_me_main h2 {
+  vertical-align: bottom;
+  top: 15%;
+  left: -10%;
+  font-size: 40px;
+  transform: rotate(-90deg);
+  letter-spacing: 10px;
+  font-weight: 700;
+  color: #3C3C3C;
+  position: absolute;
+}
+
+.about_me_img {
+  display: flex;
+  background-color: #DFDFDF;
+  height: 60vh;
+  width: 50vh;
+  transform: translate(-35%, 0%);
+  overflow: hidden;
+}
+
+.about_me_img img {
+  position: absolute;
+  bottom: 0;
+  width: 120%;
+  height: auto;
+  transform: translate(-5%, 10%);
+}
+
+.about_me_txt {
+  text-align: left;
+  width: 60%;
+  text-transform: none;
+  color: #BBBBBB;
+  transform: translate(-10%, 0%);
+}
+
+.about_me_txt p {
+  text-align: left;
+  width: 70%;
+  font-size: 18px;
+  text-transform: none;
+  color: #BBBBBB;
+}
+
+.about_me_txt h1 {
+
+  text-align: left;
+  font-size: 20px;
+  color: #252525;
+}
+
+/************************/
+/********GALERIA*********/
+/************************/
+
+.galery_wraper {
+  display: flex;
+  margin-top: 5%;
+  text-decoration: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.galery_main {
+  position: relative;
+  display: flex;
+  background-color: #252525;
+  width: 25vw;
+  height: 80vh;
+}
+
+
+.galery_main h2 {
+  vertical-align: bottom;
+  top: 15%;
+  left: -10%;
+  font-size: 40px;
+  transform: rotate(-90deg);
+  letter-spacing: 10px;
+  font-weight: 700;
+  color: #3C3C3C;
+  position: absolute;
+}
+
+.galery_main ul {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  list-style-type: none;
+}
+
+
+.galery_main ul li a {
+  display: flex;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.galery_main ul li a:hover {
+  color: #d86232;
+}
+
+.galery {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+}
+
+.galery_page_1,
+.galery_page_2,
+.galery_page_3,
+.galery_page_4 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.galery_page_1 span,
+.galery_page_2 span,
+.galery_page_3 span,
+.galery_page_4 span {
+  display: flex;
+  width: 33%;
+  height: 33%;
+  background-color: #BBBBBB;
+}
+
+
+/************************/
+/******menu galeria******/
+/************************/
+
+/* This hides all pages */
+.ggalery {
+  display: none;
+}
+
+/* This displays the first page */
+.ggalery_default {
+  display: flex;
+}
+
+/* This displays the page corresponding to the one you clicked on */
+:target {
+  display: flex;
+}
+
+/* This hides the default page when another page is clicked */
+:target~.ggalery_default {
+  display: none;
+}
+
+/************************/
+/*********USŁUGI*********/
+/************************/
+
+.serwises {
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.serwises_wraper {
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.serwises_main {
+  position: relative;
+  display: flex;
+  background-color: #252525;
+  width: 25vw;
+  height: 80vh;
+}
+
+
+.serwises_main h2 {
+  vertical-align: bottom;
+  top: 15%;
+    left: -10%;
+    font-size: 40px;
+  transform: rotate(-90deg);
+  letter-spacing: 10px;
+  font-weight: 700;
+  color: #3C3C3C;
+  position: absolute;
+}
+
+.serwises_main ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  list-style-type: none;
+}
+
+
+.serwises_main ul li a {
+  display: flex;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.serwises_main ul li a:hover {
+  color: #d86232;
+}
+
+.serwises {
+  display: flex;
+  width: 75vw;
+  height: 80vh;
+
+}
+
+.serwises_page_1,
+.serwises_page_2,
+.serwises_page_3,
+.serwises_page_4,
+.serwises_page_5,
+.serwises_page_6,
+.serwises_page_7 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  font-size: 16px;
+  text-transform: none;
+  justify-content: space-around;
+  align-content: space-around;
+  text-align: justify;
+}
+
+.serwises_page_1 h1,
+.serwises_page_2 h1,
+.serwises_page_3 h1,
+.serwises_page_4 h1,
+.serwises_page_5 h1,
+.serwises_page_6 h1,
+.serwises_page_7 h1 {
+  height: 5vh;
+  width: 50vw;
+  font-size: 20px;
+  text-align: center;
+}
+
+.serwises_page_1 span,
+.serwises_page_2 span,
+.serwises_page_3 span,
+.serwises_page_4 span,
+.serwises_page_5 span,
+.serwises_page_6 span,
+.serwises_page_7 span {
+  display: flex;
+  font-size: 14px;
+  width: 30%;
+  height: 25%;
+  background-color: #BBBBBB;
+  padding: 15px;
+  line-height: 25px;
+  transform: scale(1, 1);
+  text-align: left;
+  overflow: hidden;
+  z-index: 80;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.serwises_page_1 span h1,
+.serwises_page_2 span h1,
+.serwises_page_3 span h1,
+.serwises_page_4 span h1,
+.serwises_page_5 span h1,
+.serwises_page_6 span h1,
+.serwises_page_7 span h1 {
+  color: #d86232;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #d86232;
+  width: 100%;
+  text-align: left;
+}
+
+.serwises_page_1 span i,
+.serwises_page_2 span i,
+.serwises_page_3 span i,
+.serwises_page_4 span i,
+.serwises_page_5 span i,
+.serwises_page_6 span i,
+.serwises_page_7 span i {
+  color: #d86232;
+  text-align: end;
+  font-size: 18px;
+  margin-top: 10px;
+
+}
+
+
+.serwises_page_1 span:hover,
+.serwises_page_2 span:hover,
+.serwises_page_3 span:hover,
+.serwises_page_4 span:hover,
+.serwises_page_5 span:hover,
+.serwises_page_6 span:hover,
+.serwises_page_7 span:hover {
+  cursor: pointer;
+  overflow: visible;
+  z-index: 81;
+  transition: all ease 0.3s;
+}
+
+
+.serwises_page_1 span:after,
+.serwises_page_2 span:after,
+.serwises_page_3 span:after,
+.serwises_page_4 span:after,
+.serwises_page_5 span:after,
+.serwises_page_6 span:after,
+.serwises_page_7 span:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: all ease 0.5s;
+  box-shadow: inset 0px -44px 30px -15px rgba(129, 66, 30, 0.10);
+}
+
+
+
+.serwises_page_1 span:hover:after,
+.serwises_page_2 span:hover:after,
+.serwises_page_3 span:hover:after,
+.serwises_page_4 span:hover:after,
+.serwises_page_5 span:hover:after,
+.serwises_page_6 span:hover:after,
+.serwises_page_7 span:hover:after {
+  width: 100%;
+  height: 220%;
+  overflow: visible;
+  transform-origin: top;
+  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+/************************/
+/******menu usługi*******/
+/************************/
+
+/* This hides all pages */
+.sgalery {
+  display: none;
+}
+
+/* This displays the first page */
+.sgalery_default {
+  display: flex;
+}
+
+/* This displays the page corresponding to the one you clicked on */
+:target {
+  display: flex;
+}
+
+/* This hides the default page when another page is clicked */
+:target~.sgalery_default {
+  display: none;
+}
+
+
+/************************/
+/*********CENNIK*********/
+/************************/
+
+
+
+.price_wraper {
+  display: flex;
+  margin-top: 5%;
+  text-decoration: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.price_main {
+  position: relative;
+  display: flex;
+  background-color: #252525;
+  width: 30vw;
+  height: 80vh;
+}
+
+.price_main h2 {
+  vertical-align: bottom;
+  top: 15%;
+  left: -10%;
+  font-size: 40px;
+  transform: rotate(-90deg);
+  letter-spacing: 10px;
+  font-weight: 700;
+  color: #3C3C3C;
+  position: absolute;
+}
+
+.price_main ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  list-style-type: none;
+}
+
+
+.price_main ul li a {
+  display: flex;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.price_main ul li a:hover {
+  color: #d86232;
+}
+
+.price {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+
+}
+
+.price_page_1,
+.price_page_2,
+.price_page_3,
+.price_page_4,
+.price_page_5,
+.price_page_6,
+.price_page_7 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
   
-      <img src="img/logo_270x50.png" alt="">
-      <img src="img/Bez-nazwy-2a.png" alt="" class="altLogo">
-    </aside>
-    <div class="hamburger">
-        <i class="icon-angle-double-down"></i>
-    </div>
-    <nav class="">
-      <ul>
-        <li><a href="#main" >strona główna
-            <i class="icon-home"></i>
-          </a></li>
-        <li><a href="#about_me" >o mnie
-            <i class="icon-camera"></i>
-          </a></li>
-        <li><a href="#galery" >galeria
-            <i class="icon-dollar"></i>
-          </a></li>
-        <li><a href="#serwises" >usługi
-            <i class="icon-percent"></i>
-          </a></li>
-        <li><a href="#price" >cennik
-            <i class="icon-phone"></i>
-          </a></li>
-        <li><a href="#footer" >kontakt
-            <i class="icon-phone"></i>
-          </a></li>
-      </ul>
-    </nav>
-  </main>
+}
 
-  <section>
-    <div class="main_wraper">
-      <!-- <img src="img/1500x1500.png" alt=""> -->
-      <span class="main_img"></span>
-      <div class="main_wraper_text">
-        <h1>
-          <span>MOBILNY</span>
-          <span>GABINET</span>
-          <span>KOSMETYCZNY</span>
-        </h1>
-      </div>
-    </div>
-    <div id="about_me">
-      <div class="about_me_wraper">
-        <div class="about_me_main">
-          <h2>o mnie</h2>
-        </div>
-        <div class="about_me_img">
-          <img src="img/about_me_img.png" alt="">
-        </div>
-        <div class="about_me_txt">
-          <h1>O MNIE
-            <p>Nazywam się Agnieszka Libera. Od jedenastu lat pracuję jako kosmetyczka.
-              W 2008 roku ukończyłam Studium Kosmetyczne z tytułem Technika Usług Kosmetycznych, a dwa lata
-              później Wyższą Szkołę Teologiczno-Humanistyczną w specjalności Promocja Zdrowia.
-              Kosmetyka jest nie tylko moją pracą, ale także pasją. Czerpię radość z tego, co robię, bo wiem, że
-              mogę pomóc komuś nie tylko zadbać o jego wygląd, ale też podnieść samoocenę.
-              Największą satysfakcję czuję, gdy widzę uśmiech na twarzy klienta.
-              Pracuję z dbałością o szczegóły, nie pozwalam sobie na niedociągnięcia. Dlatego stosuję
-              profesjonalne kosmetyki — jestem pewna ich jakości, a przede wszystkim skuteczności.
-              Dbam nie tylko o zewnętrzny wygląd ciała, ale także o jego kondycję. Kiedyś trenowałam hip-hop i
-              taniec towarzyski, dziś jestem instruktorką fitness w Centrum Silesian Power w Bytomiu.
-              Bardzo cenię ludzi zaangażowanych w to, co robią. Dlatego chętnie współpracuję z firmą Katarzyna
-              Biadacz Fotografia.</p>
-          </h1>
-        </div>
-      </div>
-    </div>
-    <div id="galery">
-      <div class="galery_wraper">
-        <div class="galery_main">
-          <h2>galeria</h2>
-          <ul>
-            <li><a href="#g1">WSZYSTKIE
-              </a></li>
-            <li><a href="#g2">SESJE
-              </a></li>
-            <li><a href="#g3">MAKIJAŻE
-              </a></li>
-            <li><a href="#g4">ZABIEGI
-              </a></li>
-          </ul>
-        </div>
-        <div class="galery">
-          <div id="g2" class="galery_page_2 ggalery">
-            <span>aa</span>
-            <span>bb</span>
-            <span>cc</span>
-            <span>dd</span>
-            <span>ee</span>
-            <span>ff</span>
-            <span>gg</span>
-            <span>hh</span>
-            <span>ii</span>
-          </div>
-          <div id="g3" class="galery_page_3 ggalery">
-            <span>A</span>
-            <span>B</span>
-            <span>C</span>
-            <span>D</span>
-            <span>E</span>
-            <span>F</span>
-            <span>G</span>
-            <span>H</span>
-            <span>I</span>
-          </div>
-          <div id="g4" class="galery_page_4 ggalery">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-            <span>6</span>
-            <span>7</span>
-            <span>8</span>
-            <span>9</span>
-          </div>
-          <div id="g1" class="galery_page_1  ggalery ggalery_default">
-            <span>11</span>
-            <span>12</span>
-            <span>13</span>
-            <span>14</span>
-            <span>15</span>
-            <span>16</span>
-            <span>17</span>
-            <span>18</span>
-            <span>19</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="serwises">
-      <div class="serwises_wraper">
-        <div class="serwises">
+.price_page_1 span:nth-child(1),
+.price_page_2 span:nth-child(1),
+.price_page_3 span:nth-child(1),
+.price_page_4 span:nth-child(1),
+.price_page_5 span:nth-child(1),
+.price_page_6 span:nth-child(1),
+.price_page_7 span:nth-child(1) {
+  display: flex;
+  width: 27%;
+  height: 75vh;
+  border: 1px solid #BBBBBB;
+  margin-left: 20px;
+}
 
-          <div id="s2" class="serwises_page_2 sgalery">
-            <h1>Zabiegi ujędrniające i liftingujące</h1>
-            <span>
-              <h1>TEMPTATION</h1>
-              Luksusowy zabieg liftingujący oparty na jadzie węża i komórkach macierzystych.<br>
-              Zabieg z masażem – 160 zł, czas 90 min<br>
-              Zabieg bez masażu – 120 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">120 - 160zł</i>
-            </span>
-            <span>
-              <h1>RETI FUSION</h1>
-              Profilaktyka przeciwstarzeniowa. Zabieg silnie odmładzający z 0,3% retinolem, kwas ferulowym, wit. C i E.
-              Zabieg rozjaśniający, ujędrniający, napinający<br>
-              Zabieg z masażem – 190 zł, czas 90 min<br>
-              Zabieg bez masażu – 150 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">150 - 190zł</i>
-            </span>
-            <span>
-              <h1>RH+</h1>
-              Odmładzający, przebudowujący strukturę tkankową.
-              Oparty na bazie supernatantu ludzkich adipocytowych komórek macierzystych.
-              Zbliżone działanie do mezoterapii osoczem bogatopłytkowym „PRO-LIKE”.<br>
-              Zabieg z masażem – 190 zł, czas trwania 90 min<br>
-              Zabieg bez masażu – 150 zł, czas trwania 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">150 - 190zł</i>
-            </span>
-            <span>
-              <h1>PHYTIC</h1>
-              Oparty na 25% kwasie fitowym dla skór dojrzałych, zwiotczałych, z tendencją do przebarwień.<br>
-              Cena zabiegu – 140 zł, czas 60 min
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">140zł</i>
-            </span>
-            <span>
-              <h1>FERULAC AGE</h1>
-              Efekt „laser-like”. Zabieg oparty na 10% kwasie ferulowym o działaniu antyoksydacyjnym.
-              Ekspresowy zabieg odmładzający, napinający, rozjaśniający, opóźniający fotostarzenie.<br>
-              Cena zabiegu – 160 zł, czas trwania 60 min
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">160zł</i>
-            </span>
-            <span>
-              <h1>MASAŻ KLASYCZNY TWARZY, SZYI I DEKOLTU</h1>
-              Cena zabiegu – 60 zł, czas 45 min
-              <i class="icon-clock">45min</i>
-              <i class="icon-dollar">60zł</i>
-            </span>
-            <span>
-              <h1>MASAŻ LIFTINGUJĄCY TWARZY, SZYI I DEKOLTU</h1>
-              Cena zabiegu – 80 zł, czas 60 min
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">80zł</i>
-            </span>
-          </div>
-          <div id="s3" class="serwises_page_3 sgalery">
-            <h1>Zabiegi wzmacniające, dające ukojenie skórom wrażliwym</h1>
-            <span>
-              <h1>REACTIF</h1>
-              Łagodząco-nawilżający zabieg neourosensoryczny dla cery nadreaktywnej, wrażliwej i z popękanymi
-              naczynkami.<br>
-              Zabieg z masażem – 140 zł, czas 90 min<br>
-              Zabieg bez masażu – 100 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">100 -140zł</i>
-            </span>
-            <span>
-              <h1>SYN BIOTIC</h1>
-              Przeciwzmarszczkowy, nawilżający, łagodzący zabieg pro- i prebiotyczny dla skóry nadwrażliwej, skłonnej do
-              podrażnień i atopii, z trądzikiem różowatym.
-              Przeznaczony również dla osób z chorobami autoimmunologicznymi oraz stosowany po inwazyjnych zabiegach
-              kosmetologicznych.<br>
-              Zabieg z masażem – 140 zł, czas 90 min<br>
-              Zabieg bez masażu – 100 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">100 -140zł</i>
-            </span>
-            <span>
-              <h1>LACTOBIONIQUE</h1>
-              Rewolucyjna, przeciwzmarszczkowa terapia dla skór atopowych i z trądzikiem różowatym.
-              20% kwas laktobionowy oraz kompleks anti-age sculptessence.<br>
-              Zabieg z masażem – 160 zł, czas 90 min<br>
-              Zabieg bez masażu – 120 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">120 -160zł</i>
-            </span>
-            <span>
-              <h1>ACNE LOGIQUE</h1>
-              Specjalistyczny zabieg dla cery trądzikowej, tłustej, łojotokowej.
-              Silne działanie bakteriobójcze, przeciwzapalne, antyseptyczne, łagodzące.
-              Niweluje przebarwienia oraz przyspiesza gojenie się naskórka.<br>
-              Zabieg bez masażu – 100 zł, czas 60 min
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">100zł</i>
-            </span>
-            <!-- <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span> -->
-          </div>
-          <div id="s4" class="serwises_page_4 sgalery">
-            <h1>Zabiegi złuszczająco-oczyszczające</h1>
-            <span>
-              <h1>MIKRODERMABRAZJA</h1>
-              Polecana dla skór tłustych, zanieczyszczonych, zaskórnikowych.
-              Mechaniczne mocne złuszczanie, oczyszczenie naskórka.
-              Zabieg łączony z kwasem migdałowym daje dodatkowo efekt ujędrnienia, wygładzenia i intensywne rozjaśnienie
-              skóry.<br>
-              Cena zabiegu – 100 zł, czas 60 min<br>
-              Cena zabiegu z kwasem migdałowym i algami – 150 zł, czas 90 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">100 - 150zł</i>
-            </span>
-            <span>
-              <h1>PEELING KAWITACYJNY</h1>
-              Plecany dla skóry wrażliwych, przesuszonych.
-              Wibracje usprawniają przepływ krwi i limfy, co zapewnia dotlenienie i pobudzenie odbudowy skóry.<br>
-              Cena zabiegu – 40 zł, czas 30 min
-              <i class="icon-clock">30min</i>
-              <i class="icon-dollar">40zł</i>
-            </span>
-            <span>
-              <h1>KWAS MIGDAŁOWY 50% + PHA pH 1,5</h1>
-              Peeling całoroczny dla skór młodych, tłustych oraz dojrzałych.
-              Skutecznie złuszcza, wygładza i rozjaśnia przebarwienia.
-              Redukuje zmarszczki, lekko napina i łagodzi zmiany naczyniowe.<br>
-              Cena zabiegu – 80 zł, czas 40 min
-              <i class="icon-clock">40min</i>
-              <i class="icon-dollar">80zł</i>
-            </span>
-            <span>
-              <h1>KWAS PIROGRONOWY 35% + kwas mlekowy i azelainowy pH 1,3</h1>
-              Dla skór tłustych, zanieczyszczonych, trądzikowych oraz z przebarwieniami. Działa antybakteryjnie,
-              złuszcza, wygładza, zmniejsza rozszerzone pory
-              oraz rozjaśnia przebarwienia. <br>
-              Cena zabiegu – 70 zł, czas 30 min
-              <i class="icon-clock">30min</i>
-              <i class="icon-dollar">70zł</i>
-            </span>
-            <span>
-              <h1>KWAS STRIVA-DERM ASP 70% pH 1,5</h1>
-              Stanowi połączenie kwasu glikolowego, mlekowego, cytrynowego, azelainowego, pirogronowego i salicylowego.
-              Przeznaczony dla skór dojrzałych, zanieczyszczonych, z przebarwieniami.
-              Zapewnia poprawę struktury i kolorytu skóry, odblokowanie porów skóry, silne działanie antybakteryjne,
-              zwiększoną produkcję kolagenu i elastyny oraz spłycenie zmarszczek.<br>
-              Cena zabiegu – 100 zł, czas 30 min
-              <i class="icon-clock">30min</i>
-              <i class="icon-dollar">100zł</i>
-            </span>
-            <span>
-              <h1>KWAS SALICYLOWY 30% pH 2,2</h1>
-              Przeznaczony dla skór tłustych, zanieczyszczonych, trądzikowych. Działa przeciwzapalnie, grzybobójczo i
-              bakteriobójczo.<br>
-              Cena zabiegu – 70 zł, czas 30 min
-              <i class="icon-clock">30min</i>
-              <i class="icon-dollar">70zł</i>
-            </span>
-            <span>
-              <h1>KWAS GLIKOLOWY 70% pH 0,8</h1>
-              Intensywny peeling odmładzający dla skóry dojrzałej, ze zmarszczkami, z fotostarzeniem, bliznami,
-              rozstępami.
-              Zapewnia głębokie wnikanie oraz odbudowę włókien kolagenowych i elastynowych.<br>
-              Cena zabiegu – 120 zł, czas 30 min
-              <i class="icon-clock">30min</i>
-              <i class="icon-dollar">120zł</i>
-            </span>
-            <span>
-              <h1>RETI FUSION PEEL – SET</h1>
-              Serum z 10% wit. C i 30% antyoksydantów oraz maska złuszczająca z 5% retinolem.
-              Wszechstronne działanie odmładzające, naprawcze, rozjaśniające.<br>
-              Cena zabiegu – 170 zł, czas 30 min<br>
-              Zabieg + kwas migdałowy – 190 zł czas, 40 min<br>
-              Zabieg poprzedzony kwasem migdałowym – 210 zł, czas 40 min
-              <i class="icon-clock">30 - 40min</i>
-              <i class="icon-dollar">170zł-210zł</i>
-            </span>
-            <span>
-              <h1>PHYTO FENOL PEEL</h1>
-              Peeling roślinny z fenolem + maska z 5% retinolem. Zabieg silnie rozjaśniający i odmładzający.
-              Zwalcza melasmę, przebarwienia, ostudę, fotostaszenie, zmarszczki.<br>
-              Cena zbiegu – 230 zł, czas 30 min
-              <i class="icon-clock">30min</i>
-              <i class="icon-dollar">230zł</i>
-            </span>
-          </div>
-          <div id="s5" class="serwises_page_5 sgalery">
-            <h1>PIELĘGNACJA DŁONI I PAZNOKCI</h1>
-            <span>
-              <h1>MANICURE BIOLOGICZNY</h1>
-              Usunięcie skórek, wypolerowanie i nadanie kształtu paznokciom, oliwka na skórki i krem na dłonie.
-              <i class="icon-clock">45min</i>
-              <i class="icon-dollar">30zł</i>
-            </span>
-            <span>
-              <h1>MANICURE JAPOŃSKI</h1>
-              Usunięcie skórek, maksymalnie odżywienie i wzmocnienia paznokci oraz nadanie im połysku poprzez wcieranie
-              pasty zawierającej wit. A i E, krzemionkę z Morza Japońskiego, pyłek pszczeli i keratynę + oliwka na
-              skórki i krem na dłonie.
-              <i class="icon-clock">50min</i>
-              <i class="icon-dollar">50zł</i>
-            </span>
-            <span>
-              <h1>MANICURE HYBRYDOWY</h1>
-              Usunięcie skórek, hybryda, oliwka na skórki.
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">50zł</i>
-            </span>
-            <span>
-              <h1>PARAFINA NA DŁONIE + PEELING DŁONI</h1>
-              <i class="icon-clock">20min</i>
-              <i class="icon-dollar">30zł</i>
-            </span>
-            <span>
-              <h1>PRZEKŁUWANIE USZU</h1>
-              <i class="icon-clock">20min</i>
-              <i class="icon-dollar">40zł</i>
-            </span>
-            <!-- <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span> -->
-          </div>
-          <div id="s6" class="serwises_page_6 sgalery">
-            <h1>PIELĘGNACJA STÓP I PAZNOKCI</h1>
-            <span>
-              <h1>PEDICURE STOPY + PAZNOKCIE </h1>
-              Kąpiel stóp w soli, peeling, usunięcie zrogowaciałego naskórka za pomocą omegi/skalpela oraz frezarki,
-              wypolerowanie i nadanie kształtu paznokciom, oliwka na skórki, krem na stopy.
-              <i class="icon-clock">70min</i>
-              <i class="icon-dollar">60zł</i>
-            </span>
-            <span>
-              <h1>PEDICURE STOPY + PAZNOKCIE + LAKIER</h1>
-              <i class="icon-clock">90min</i>
-              <i class="icon-dollar">80zł</i>
-            </span>
-            <span>
-              <h1>PEDICURE STOPY + HYBRYDA</h1>
-              <i class="icon-clock">90min</i>
-              <i class="icon-dollar">100zł</i>
-            </span>
-            <span>
-              <h1>HYBRYDA PAZNOKCI STÓP</h1>
-              <i class="icon-clock">45min</i>
-              <i class="icon-dollar">50zł</i>
-            </span>
-            <!-- <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span> -->
-          </div>
-          <div id="s7" class="serwises_page_7 sgalery">
-            <h1>MAKIJAŻ</h1>
-            <span>
-              <h1>WIECZOROWY</h1>
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">60zł</i>
-            </span>
-            <span>
-              <h1>DZIENNY</h1>
-              <i class="icon-clock">30min</i>
-              <i class="icon-dollar">40zł</i>
-            </span>
-            <span>
-              <h1>ŚLUBNY (w tym makijaż próbny)</h1>
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">140zł</i>
-            </span>
-            <span>
-              <h1>BIZNESOWY</h1>
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">30zł</i>
-            </span>
-            <span>
-              <h1>DO SESJI ZDJĘCIOWEJ</h1>
-              <i class="icon-clock">60min</i>
-              <i class="icon-dollar">60zł</i>
-            </span>
-            <span>
-              <h1>MAKIJAŻ + KĘPKI RZĘS</h1>
-              + 10-20 zł do ceny makijażu.
-              <i class="icon-clock">10min</i>
-              <i class="icon-dollar">10 - 20zł</i>
-            </span>
-            <span>
-              <h1>MAKIJAŻ + RZĘSY NA PASKU</h1>
-              + 30 zł do ceny makijażu.
-              <i class="icon-clock">15min</i>
-              <i class="icon-dollar">30zł</i>
-            </span>
-            <!-- <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span>
-            <span>
-              <h1></h1>
-              <i class="icon-clock"></i>
-              <i class="icon-dollar"></i>
-            </span> -->
-          </div>
-          <div id="s1" class="serwises_page_1 sgalery_default">
-            <h1>Zabiegi odżywcze, przeciwzmarszczkowe</h1>
-            <span>
-              <h1>JUNGLE</h1>
-              Zabieg silnie regenerujący, nawilżający, łagodzący, przeciwzmarszczkowy.<br>
-              Ekolinia dla skór niedotlenionych, odwodnionych i wymagających odżywienia, na bazie oleju z marakui oraz
-              składników aktywnych pozyskiwanych z kwiatów wiśni.<br>
-              Zabieg z masażem – 160 zł, czas trwania 90 min.<br>
-              Zabieg bez masażu – 120 zł, czas trwania 60 min.
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">120 - 160zł</i>
-            </span>
-            <span>
-              <h1>CONTRADICTIO</h1>
-              Przeciwzmarszczkowy zabieg antysmogowy, przeciwdziałający zanieczyszczeniom środowiska i
-              promieniowaniu UVA/UVB IR-A oraz BLUE LIGHT.<br>
-              Zabieg oparty na ektoinie, która zmniejsza widoczność zmarszczek, ujędrnia, wygładza i długotrwale
-              nawilża skórę.<br>
-              Zabieg z masażem – 160 zł, czas 90 min<br>
-              Zabieg bez masażu – 120 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">120 - 160zł</i>
-            </span>
-            <span>
-              <h1>COLLAGENIQUE</h1>
-              Zabieg przywracający sprężystość, jędrność, nawilżenie skóry oraz odnowę komórek skóry<br>
-              Zabieg z masażem – 180 zł, czas 90 min<br>
-              Zabieg bez masażu – 150 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">150 - 180zł</i>
-            </span>
-            <span>
-              <h1>REVERSO</h1>
-              Zabieg silnie regenerujący, przeciwzmarszczkowy, natłuszczający i nawilżający
-              dla cery alipidowej, pozbawionej podściółki tłuszczowej<br>
-              Zabieg z masażem – 170 zł, czas 90 min<br>
-              Zabieg bez masażu – 130 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">130 - 170zł</i>
-            </span>
-            <span>
-              <h1>VITA FORCE</h1>
-              Rewolucyjna, witaminowa terapia odżywcza, nawilżająca, regenerująca.<br>
-              Kompleks witaminy C i kolagen.<br>
-              Zabieg z masażem – 160 zł, czas 90 min<br>
-              Zabieg bez masaży – 120 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">120 - 160zł</i>
-            </span>
-            <span>
-              <h1>AQUASTIC</h1>
-              Innowacyjna terapia intensywnego nawilżenia skóry.<br>
-              Zabieg oparty na kwasie hialuronowym, mającym silne działanie wypełniające i wygładzające zmarszczki
-              oraz zwiększającym elastyczność skóry.<br>
-              Zabieg z masażem – 140 zł, czas 90 min<br>
-              Zabieg bez masażu – 100 zł, czas 60 min
-              <i class="icon-clock">60 - 90min</i>
-              <i class="icon-dollar">100 - 140zł</i>
-            </span>
-            <!-- <span></span>
-            <span></span>
-            <span></span> -->
+.price_page_1 span:nth-child(2),
+.price_page_2 span:nth-child(2),
+.price_page_3 span:nth-child(2),
+.price_page_4 span:nth-child(2),
+.price_page_5 span:nth-child(2),
+.price_page_6 span:nth-child(2),
+.price_page_7 span:nth-child(2) {
+  display: flex;
+  min-width: 40vh;
+  width: 65%;
+  height: 75vh;
+  border: 1px solid #BBBBBB;
+  margin-left: 20px;
+}
 
-          </div>
-        </div>
-        <div class="serwises_main">
+.price span ul {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price span ul li {
+  margin-left: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  list-style-type: none;
+  text-align: left;
+  line-height: 40px;
+  text-transform: none;
+}
+
+.price_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price span i {
+  border: 15px solid #d86232;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20%;
+  font-size: 30px;
+  line-height: 110px;
+}
+
+.price span a {
+  margin-top: 10%;
+  font-size: 25px;
+  line-height: 40px;
+}
+
+
+/************************/
+/******menu cennik*******/
+/************************/
+
+
+/* This hides all pages */
+.pgalery {
+  display: none;
+}
+
+/* This displays the first page */
+.pgalery_default {
+  display: flex;
+}
+
+/* This displays the page corresponding to the one you clicked on */
+:target {
+  display: flex;
+}
+
+/* This hides the default page when another page is clicked */
+:target~.pgalery_default {
+  display: none;
+}
+
+
+/************************/
+/********STOPKA**********/
+/************************/
+
+footer {
+  display: flex;
+  background-color: black;
+  min-height: 350px;
+  height: 40vh;
+  width: 1571px;
+  text-align: center;
+  flex-direction: column;
+  font-size: 16px;
+  color: white;
+}
+
+.footer_wraper {
+  margin-top: 15px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.footer_adress {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 35vh;
+  margin-left: 30px;
+  margin-top: 15px;
+  line-height: 24px;
+}
+
+.footer_price {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-decoration: none;
+  list-style-type: none;
+  height: 35vh;
+  margin: 10px;
+  line-height: 24px;
+}
+
+.footer_price h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.footer_price ul {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+  align-items: flex-start;
+  font-size: 14px;
+
+}
+
+.footer_email {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 30%;
+  text-decoration: none;
+  list-style-type: none;
+  height: 35vh;
+  margin: 10px 30px 0px 30px;
+  line-height: 24px;
+
+}
+
+.footer_email div {
+  margin-top: 80px;
+  letter-spacing: 50px;
+}
+
+.footer_email i {
+  color: white;
+  font-size: 70px;
+  transition: ease .5s;
+}
+
+.footer_email i:hover {
+  color: #d86232;
+
+}
+
+.footer_email a[alt_title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+.footer_email a[Alt_title]:after {
+  content: attr(alt_title);
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  position: absolute;
+  font-weight: 700;
+  padding: 2px 4px 2px 8px;
+  bottom: -1.6em;
+  letter-spacing: 3px;
+  left: 0%;
+  white-space: nowrap;
+  opacity: 0;
+  z-index: 99999;
+  visibility: hidden;
+}
+
+.footer_email a[alt_title] {
+  position: relative;
+}
+
+.footer_map {
+  flex-basis: 20%;
+}
+
+.footer_map img {
+  justify-items: center;
+  width: 100%;
+  height: auto;
+  transform-origin: bottom;
+}
+
+.footer_email_phone{
+  display: none;
+}
+
+.footer_allrights {
+  background-color: black;
+  color: white;
+  justify-content: center;
+  height: 5vh;
+  
+}
+
+@media all and (min-width: 100px) and (max-width: 300px)  {
+  body {
+    width: 100%;
+    font-size: 6px;
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+    height: 50px;
+  }
+
+  
+section {
+  width: 100%;
+}
+
+  aside {
+    margin: 0%;
+  }
+
+  aside img {
+    max-width: 50%;
+    width: 50%;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 20px;
+    }
+
+  nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: 0%;
+    width: 100%;
+    top: -270px;
+    align-items: center;
+    transition: .2s linear;
+    z-index: -10;
+  }
+
+  .hamburger.on {
+    transform: rotate(540deg);
+    }
+
+  nav.on {
+    top: 0px;
+    z-index: -10;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li ::before {
+    display: none;
+  }
+
+  nav ul li ::after {
+    display: none;
+  }
+
+  nav ul :hover {
+    background-color: #b3745ca4;
+
+  }
+
+  /************************/
+  /*****STRONA GŁÓWNA******/
+  /************************/
+
+  .main_wraper {
+    display: flex;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .main_img{
+    width: 100vw;
+    height: 100vw;
+    right: 0;
+     }
+
+
+  .main_wraper div {
+    display: none;
+  }
+
+  /************************/
+  /*********O MNIE*********/
+  /************************/
+
+  #about_me {
+    display: flex;
+  }
+
+  .about_me_wraper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about_me_main {
+    margin-left: 0%;
+    width: 100%;
+    min-height: 20vh;
+    height: auto;
+  }
+
+  .about_me_main h1 {
+    font-size: 40px;
+    top: 35%;
+    left: 30%;
+  }
+
+  .about_me_main h2 {
+    vertical-align: initial;
+    top: 20%;
+    left: 40%;
+    font-size: 30px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .about_me_img {
+    display: none;
+  }
+
+  .about_me_txt {
+    margin-top: 10px;
+    width: 80%;
+    transform: translate(0%, 0%);
+  }
+
+  .about_me_txt p {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .about_me_txt h1 {
+    font-size: 0px;
+    margin: 10px;
+  }
+
+
+  /************************/
+  /********GALERIA*********/
+  /************************/
+
+  .galery_wraper {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+
+  }
+
+  .galery_main {
+    width: 100%;
+    height: 200px;
+  }
+
+  .galery_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .galery_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 40%;
+    font-size: 30px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+
+  .galery_main ul {
+    top: 40%;
+    left: 5%;
+  }
+
+
+  .galery_main ul li a {
+    display: flex;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+
+  .galery {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+
+  .galery_page_1,
+  .galery_page_2,
+  .galery_page_3,
+  .galery_page_4 {
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    flex-grow: 0;
+    flex-direction: column;
+
+  }
+
+  .galery_page_1 span,
+  .galery_page_2 span,
+  .galery_page_3 span,
+  .galery_page_4 span {
+    display: flex;
+    width: 80vw;
+    height: 20vh;
+    margin-top: 5px;
+    background-color: #BBBBBB;
+
+  }
+
+
+  /************************/
+  /*********USŁUGI*********/
+  /************************/
+
+
+
+  .serwises_wraper {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .serwises {
+    width: 100%;
+    height: auto;
+  }
+
+  .serwises_main {
+    width: 100%;
+    height: 230px;
+  }
+
+  .serwises_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .serwises_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 40%;
+    font-size: 30px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .serwises_main ul {
+    flex-direction: column;
+    top: 35%;
+    left: 5%;
+  }
+
+  .serwises_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 8px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 12px;
+    width: 70%;
+    height: 130px;
+    padding: 5px;
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    font-size: 12px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 12px;
+    margin-top: 3px;
+
+  }
+
+  /************************/
+  /********CENNIK**********/
+  /************************/
+
+  #price {
+    width: 100%;
+    margin: 0;
+
+  }
+
+  .price_wraper {
+    margin-top: 5px;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .price_main {
+    width: 100%;
+    height: 250px;
+    margin-left: 0;
+    flex-direction: row;
+  }
+
+  .price_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .price_main h2 {
+    vertical-align: initial;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+    top: 10%;
+    left: 40%;
+    font-size: 30px;
+  }
+
+
+  .price_main ul {
+    position: relative;
+    top: 15%;
+    left: 5%;
+  }
+
+  .price_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+
+  .price {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 450px;
+  }
+
+  .price_page_1,
+  .price_page_2,
+  .price_page_3,
+  .price_page_4,
+  .price_page_5,
+  .price_page_6,
+  .price_page_7 {
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price_page_1 span:nth-child(1),
+  .price_page_2 span:nth-child(1),
+  .price_page_3 span:nth-child(1),
+  .price_page_4 span:nth-child(1),
+  .price_page_5 span:nth-child(1),
+  .price_page_6 span:nth-child(1),
+  .price_page_7 span:nth-child(1) {
+    width: 90vw;
+    height: 10vh;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 0;
+  }
+
+  .price_page_1 span:nth-child(2),
+  .price_page_2 span:nth-child(2),
+  .price_page_3 span:nth-child(2),
+  .price_page_4 span:nth-child(2),
+  .price_page_5 span:nth-child(2),
+  .price_page_6 span:nth-child(2),
+  .price_page_7 span:nth-child(2) {
+    width: 90vw;
+    height: auto;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    min-width: 0;
+  }
+
+  .price span ul {
+    margin-top: 10px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .price span ul li {
+    margin-left: 0px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+
+
+  .price span i {
+    border: 0px solid #d86232;
+    height: 0px;
+    width: 0px;
+    border-radius: 0%;
+    margin-top: 10px;
+    font-size: 8px;
+    line-height: 20px;
+  }
+
+  .price span a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  /************************/
+  /********STOPKA**********/
+  /************************/
+
+  footer {
+    background-color: black;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    font-size: 14px;
+
+  }
+
+  .footer_wraper {
+    margin-top: 5px;
+    flex-direction: column;
+  }
+
+  .footer_adress {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-left: 0px;
+    margin-top: 0px;
+    line-height: 20px;
+  }
+
+  .footer_price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    height: 100px;
+    line-height: 10px;
+  }
+
+  .footer_price h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+  }
+
+  .footer_price ul {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .footer_email {
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 5%;
+    margin: 0px 0px 0px 0px;
+    line-height: 15px;
+  }
+
+  .footer_email div {
+    margin-top: 10px;
+    letter-spacing: 10px;
+  }
+
+  .footer_email i {
+    font-size: 40px;
+  }
+
+   .footer_email a[Alt_title]:after {
+    display: none;
+  }
+
+  .footer_email a[alt_title] {
+    display: none;
+  } 
+
+  .footer_allrights {
+    background-color: black;
+    height: auto;
+    margin: 10px 10px 5px 10px;
+  }
+  
+  .footer_email_phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 4px;
+    height: 10vh;
+    min-height: 70px;
+    text-align: left;
+   justify-content: center;
+   
+  }
+
+  
+  .footer_email_phone i {
+   color: white;
+   list-style-type: none;
+   text-decoration: none;
+   font-size: 15px;
+   margin-left: 5vw;
+   margin-right: 10px;
+   margin-bottom: 10px;
+  }
+
+  .footer_email_phone a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing:2px ;
+    margin-bottom: 3px;
+   }
+
+  .footer_map {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer_map img {
+    justify-items: center;
+    width: 85%;
+  }
+}
+
+@media all and (min-width: 301px) and (max-width: 590px)  {
+  body {
+    width: 100%;
+    font-size: 6px;
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+    height: 80px;
+  }
+
+  
+section {
+  width: 100%;
+}
+
+  aside {
+    margin: 0%;
+  }
+
+  aside img {
+    max-width: 50%;
+    width: 50%;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 20px;
+    }
+
+  nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: 0%;
+    width: 100%;
+    top: -270px;
+    align-items: center;
+    transition: .2s linear;
+    z-index: -10;
+  }
+
+  .hamburger.on {
+    transform: rotate(540deg);
+    }
+
+  nav.on {
+    top: 0px;
+    z-index: -10;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li ::before {
+    display: none;
+  }
+
+  nav ul li ::after {
+    display: none;
+  }
+
+  nav ul :hover {
+    background-color: #b3745ca4;
+  }
+
+  /************************/
+  /*****STRONA GŁÓWNA******/
+  /************************/
+
+  .main_wraper {
+    display: flex;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .main_img{
+    width: 100vw;
+    height: 100vw;
+    right: 0;
+     }
+
+  /* .main_wraper img {
+    display: flex;
+    right: 0%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  } */
+
+  .main_wraper div {
+    display: none;
+  }
+
+  /************************/
+  /*********O MNIE*********/
+  /************************/
+
+  #about_me {
+    display: flex;
+  }
+
+  .about_me_wraper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about_me_main {
+    margin-left: 0%;
+    width: 100%;
+    min-height: 20vh;
+    height: auto;
+  }
+
+  .about_me_main h1 {
+    font-size: 40px;
+    top: 35%;
+    left: 30%;
+  }
+
+  .about_me_main h2 {
+    vertical-align: initial;
+    top: 35%;
+    left: 50%;
+    font-size: 35px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .about_me_img {
+    display: none;
+  }
+
+  .about_me_txt {
+    margin-top: 10px;
+    width: 80%;
+    transform: translate(0%, 0%);
+  }
+
+  .about_me_txt p {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .about_me_txt h1 {
+    font-size: 0px;
+    margin: 10px;
+  }
+
+
+  /************************/
+  /********GALERIA*********/
+  /************************/
+
+  .galery_wraper {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+
+  }
+
+  .galery_main {
+    width: 100%;
+    height: 200px;
+  }
+
+  .galery_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .galery_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 50%;
+    font-size: 35px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+
+  .galery_main ul {
+    top: 40%;
+    left: 5%;
+  }
+
+
+  .galery_main ul li a {
+    display: flex;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+
+  .galery {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+
+  .galery_page_1,
+  .galery_page_2,
+  .galery_page_3,
+  .galery_page_4 {
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    flex-grow: 0;
+    flex-direction: column;
+
+  }
+
+  .galery_page_1 span,
+  .galery_page_2 span,
+  .galery_page_3 span,
+  .galery_page_4 span {
+    display: flex;
+    width: 80vw;
+    height: 20vh;
+    margin-top: 5px;
+    background-color: #BBBBBB;
+
+  }
+
+
+  /************************/
+  /*********USŁUGI*********/
+  /************************/
+
+
+
+  .serwises_wraper {
+    margin-top: 15px;
+    width: 100%;
+    ;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .serwises {
+    width: 100%;
+    height: auto;
+  }
+
+  .serwises_main {
+    width: 100%;
+    height: 230px;
+  }
+
+  .serwises_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .serwises_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 50%;
+    font-size: 35px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .serwises_main ul {
+    flex-direction: column;
+    top: 35%;
+    left: 5%;
+  }
+
+  .serwises_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 8px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 12px;
+    width: 70%;
+    height: 130px;
+    padding: 5px;
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    font-size: 12px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 12px;
+    margin-top: 3px;
+
+  }
+
+  /************************/
+  /********CENNIK**********/
+  /************************/
+
+  #price {
+    width: 100%;
+    margin: 0;
+
+  }
+
+  .price_wraper {
+    margin-top: 5px;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .price_main {
+    width: 100%;
+    height: 250px;
+    margin-left: 0;
+    flex-direction: row;
+  }
+
+  .price_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .price_main h2 {
+    vertical-align: initial;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+    top: 10%;
+    left: 50%;
+    font-size: 35px;
+  }
+
+
+  .price_main ul {
+    position: relative;
+    top: 15%;
+    left: 5%;
+  }
+
+  .price_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+
+  .price {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 450px;
+  }
+
+  .price_page_1,
+  .price_page_2,
+  .price_page_3,
+  .price_page_4,
+  .price_page_5,
+  .price_page_6,
+  .price_page_7 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .price_page_1 span:nth-child(1),
+  .price_page_2 span:nth-child(1),
+  .price_page_3 span:nth-child(1),
+  .price_page_4 span:nth-child(1),
+  .price_page_5 span:nth-child(1),
+  .price_page_6 span:nth-child(1),
+  .price_page_7 span:nth-child(1) {
+    width: 90%;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 0;
+  }
+
+  .price_page_1 span:nth-child(2),
+  .price_page_2 span:nth-child(2),
+  .price_page_3 span:nth-child(2),
+  .price_page_4 span:nth-child(2),
+  .price_page_5 span:nth-child(2),
+  .price_page_6 span:nth-child(2),
+  .price_page_7 span:nth-child(2) {
+    width: 90%;
+    height: auto;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    min-width: 0;
+  }
+
+  .price span ul {
+    margin-top: 10px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .price span ul li {
+    margin-left: 0px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+
+
+  .price span i {
+    border: 0px solid #d86232;
+    height: 0px;
+    width: 0px;
+    border-radius: 0%;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .price span a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  /************************/
+  /********STOPKA**********/
+  /************************/
+
+  footer {
+    background-color: black;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    font-size: 14px;
+
+  }
+
+  .footer_wraper {
+    margin-top: 5px;
+    flex-direction: column;
+  }
+
+  .footer_adress {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-left: 0px;
+    margin-top: 0px;
+    line-height: 20px;
+  }
+
+  .footer_price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    height: 100px;
+    line-height: 10px;
+  }
+
+  .footer_price h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+  }
+
+  .footer_price ul {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .footer_email {
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 5%;
+    margin: 0px 0px 0px 0px;
+    line-height: 15px;
+  }
+
+  .footer_email div {
+    margin-top: 10px;
+    letter-spacing: 10px;
+  }
+
+  .footer_email i {
+    font-size: 40px;
+  }
+
+   .footer_email a[Alt_title]:after {
+    display: none;
+  }
+
+  .footer_email a[alt_title] {
+    display: none;
+  } 
+
+  .footer_allrights {
+    background-color: black;
+    height: auto;
+    margin: 10px 10px 5px 10px;
+  }
+  
+  .footer_email_phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 4px;
+    height: 10vh;
+    min-height: 80px;
+    text-align: left;
+   justify-content: center;
+   
+  }
+
+  
+  .footer_email_phone i {
+   color: white;
+   list-style-type: none;
+   text-decoration: none;
+   font-size: 15px;
+   margin-left: 5vw;
+   margin-right: 10px;
+   margin-bottom: 10px;
+  }
+
+  .footer_email_phone a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing:2px ;
+    margin-bottom: 3px;
+   }
+
+  .footer_map {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer_map img {
+    justify-items: center;
+    width: 85%;
+  }
+}
+
+@media all and (min-width: 591px) and (max-width: 785px) {
+
+  body {
+    width: 100%;
+    font-size: 6px;
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+    height: 100px;
+  }
+
+  
+section {
+  width: 100%;
+}
+
+  aside {
+    margin: 0%;
+  }
+
+  aside img {
+    max-width: 50%;
+    width: 50%;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 25px;
+    }
+
+  nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: 0%;
+    width: 100%;
+    top: -270px;
+    align-items: center;
+    transition: .2s linear;
+    z-index: -10;
+  }
+
+  .hamburger.on {
+    transform: rotate(540deg);
+    }
+
+  nav.on {
+    top: 0px;
+    z-index: -10;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li ::before {
+    display: none;
+  }
+
+  nav ul li ::after {
+    display: none;
+  }
+
+  nav ul :hover {
+    background-color: #b3745ca4;
+
+  }
+
+  /************************/
+  /*****STRONA GŁÓWNA******/
+  /************************/
+
+  .main_wraper {
+    display: flex;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .main_img{
+    width: 100vw;
+    height: 100vw;
+    right: 0;
+     }
+
+  /* .main_wraper img {
+    display: flex;
+    right: 0%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  } */
+
+  .main_wraper div {
+    display: none;
+  }
+
+  /************************/
+  /*********O MNIE*********/
+  /************************/
+
+  #about_me {
+    display: flex;
+  }
+
+  .about_me_wraper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about_me_main {
+    margin-left: 0%;
+    width: 100%;
+    height: 20vh;
+  }
+
+  .about_me_main h1 {
+    font-size: 40px;
+    top: 35%;
+    left: 30%;
+  }
+
+  .about_me_main h2 {
+    vertical-align: initial;
+    top: 35%;
+    left: 50%;
+    font-size: 40px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .about_me_img {
+    display: none;
+  }
+
+  .about_me_txt {
+    margin-top: 10px;
+    width: 80%;
+    transform: translate(0%, 0%);
+  }
+
+  .about_me_txt p {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .about_me_txt h1 {
+    font-size: 0px;
+    margin: 10px;
+  }
+
+  /************************/
+  /********GALERIA*********/
+  /************************/
+
+  .galery_wraper {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+
+  }
+
+  .galery_main {
+    width: 100%;
+    height: 200px;
+  }
+
+  .galery_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .galery_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 50%;
+    font-size: 40px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+
+  .galery_main ul {
+    top: 40%;
+    left: 5%;
+  }
+
+
+  .galery_main ul li a {
+    display: flex;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+
+  .galery {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+
+  .galery_page_1,
+  .galery_page_2,
+  .galery_page_3,
+  .galery_page_4 {
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    flex-grow: 0;
+    flex-direction: column;
+
+  }
+
+  .galery_page_1 span,
+  .galery_page_2 span,
+  .galery_page_3 span,
+  .galery_page_4 span {
+    display: flex;
+    width: 80vw;
+    height: 300px;
+    margin-top: 5px;
+    background-color: #BBBBBB;
+
+  }
+
+
+  /************************/
+  /*********USŁUGI*********/
+  /************************/
+
+
+
+  .serwises_wraper {
+    margin-top: 15px;
+    width: 100%;
+    ;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .serwises {
+    width: 100%;
+    height: auto;
+  }
+
+  .serwises_main {
+    width: 100%;
+    height: 230px;
+  }
+
+  .serwises_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .serwises_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 50%;
+    font-size: 40px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .serwises_main ul {
+    flex-direction: column;
+    top: 35%;
+    left: 5%;
+  }
+
+  .serwises_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 8px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 12px;
+    width: 70%;
+    height: 130px;
+    padding: 5px;
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    font-size: 12px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 12px;
+    margin-top: 3px;
+
+  }
+
+  /************************/
+  /********CENNIK**********/
+  /************************/
+
+  #price {
+    width: 100%;
+    margin: 0;
+
+  }
+
+  .price_wraper {
+    margin-top: 5px;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .price_main {
+    width: 100%;
+    height: 250px;
+    margin-left: 0;
+    flex-direction: row;
+  }
+
+  .price_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .price_main h2 {
+    vertical-align: initial;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+    top: 10%;
+    left: 50%;
+    font-size: 40px;
+  }
+
+
+  .price_main ul {
+    position: relative;
+    top: 15%;
+    left: 5%;
+  }
+
+  .price_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+
+  .price {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 450px;
+  }
+
+  .price_page_1,
+  .price_page_2,
+  .price_page_3,
+  .price_page_4,
+  .price_page_5,
+  .price_page_6,
+  .price_page_7 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .price_page_1 span:nth-child(1),
+  .price_page_2 span:nth-child(1),
+  .price_page_3 span:nth-child(1),
+  .price_page_4 span:nth-child(1),
+  .price_page_5 span:nth-child(1),
+  .price_page_6 span:nth-child(1),
+  .price_page_7 span:nth-child(1) {
+    width: 90%;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .price_page_1 span:nth-child(2),
+  .price_page_2 span:nth-child(2),
+  .price_page_3 span:nth-child(2),
+  .price_page_4 span:nth-child(2),
+  .price_page_5 span:nth-child(2),
+  .price_page_6 span:nth-child(2),
+  .price_page_7 span:nth-child(2) {
+    width: 90%;
+    height: auto;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  .price span ul {
+    margin-top: 10px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .price span ul li {
+    margin-left: 0px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+
+
+  .price span i {
+    border: 0px solid #d86232;
+    height: 0px;
+    width: 0px;
+    border-radius: 0%;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .price span a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  /************************/
+  /********STOPKA**********/
+  /************************/
+
+  footer {
+    background-color: black;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .footer_wraper {
+    margin-top: 5px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footer_adress {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+    line-height: 20px;
+  }
+
+  .footer_price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    height: auto;
+    line-height: 10px;
+  }
+
+  .footer_price h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+  }
+
+  .footer_price ul {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .footer_email {
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 5%;
+    margin: 0px 0px 0px 0px;
+    line-height: 15px;
+  }
+
+  .footer_email div {
+    margin-top: 10px;
+    letter-spacing: 10px;
+  }
+
+  .footer_email i {
+    font-size: 50px;
+  }
+
+   .footer_email a[Alt_title]:after {
+    display: none;
+  }
+
+  .footer_email a[alt_title] {
+    display: none;
+  } 
+
+  .footer_allrights {
+    background-color: black;
+    height: auto;
+    margin: 10px 10px 5px 10px;
+  }
+
+  .footer_email_phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 4px;
+    height: auto;
+    text-align: left;
+   justify-content: center;
+   
+  }
+
+  
+  .footer_email_phone i {
+   color: white;
+   list-style-type: none;
+   text-decoration: none;
+   font-size: 25px;
+   margin-left: 5vw;
+   margin-right: 10px;
+   margin-bottom: 10px;
+  }
+
+  .footer_email_phone a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing:2px ;
+    margin-bottom: 3px;
+   }
+
+  .footer_map {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer_map img {
+    justify-items: center;
+    width: 85%;
+  }
+}
+
+@media all and (min-width: 786px) and (max-width: 1069px) {
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+
+  nav {
+    flex-basis: 50vw;
+  }
+
+  /************************/
+  /*****STRONA GŁÓWNA******/
+  /************************/
+
+  .main_wraper {
+    height: 50vh;
+    min-height: 450px ;
+  }
+
+  .main_img{
+    width: 40vw;
+    height: 40vw;
+     }
+
+  /* .main_wraper img {
+    max-width: 100%;
+  } */
+
+  .main_wraper div {
+    width: 40%;
+    height: 40%;
+    left: 50%;
+    transform: translate(-40%, 40%);
     
-          <h2>usługi</h2>
-          <ul>
-            <li><a href="#s1">Zabiegi odżywcze, przeciwzmarszczkowe
-              </a></li>
-            <li><a href="#s2">Zabiegi ujędrniające i liftingujące
-              </a></li>
-            <li><a href="#s3">Zabiegi wzmacniające i kojące
-              </a></li>
-            <li><a href="#s4">Zabiegi złuszczająco - oczyszczające
-              </a></li>
-            <li><a href="#s5">PIELĘGNACJA DŁONI I PAZNOKCI
-              </a></li>
-            <li><a href="#s6">PIELĘGNACJA STÓP I PAZNOKCI
-              </a></li>
-            <li><a href="#s7">MAKIJAŻ
-              </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  }
 
-    <div id="price">
-      <div class="price_wraper">
-        <div class="price_main">
-          <h2>cennik</h2>
-          <ul>
-            <li><a href="#p1">Zabiegi odżywcze, przeciwzmarszczkowe
-              </a></li>
-            <li><a href="#p2">Zabiegi ujędrniające i liftingujące
-              </a></li>
-            <li><a href="#p3">Zabiegi wzmacniające i kojące
-              </a></li>
-            <li><a href="#p4">Zabiegi złuszczająco - oczyszczające
-              </a></li>
-            <li><a href="#p5">PIELĘGNACJA DŁONI I PAZNOKCI
-              </a></li>
-            <li><a href="#p6">PIELĘGNACJA STÓP I PAZNOKCI
-              </a></li>
-            <li><a href="#p7">MAKIJAŻ
-              </a></li>
-          </ul>
-        </div>
-        <div class="price">
-          <div id="p2" class="price_page_2 pgalery">
-              <span class="price_left"><i>60 zł</i>
-             <a>MASAŻ KLASYCZNY TWARZY, SZYI I DEKOLTU</a> 
-            </span>
-            <span class="price_right">
-              <ul>
-                <li>TEMPTATION z masażem – 160 zł</li>
-                <li>TEMPTATION bez masażu – 120 zł</li>
-                <li>RETI FUSION z masażem – 190 zł</li>
-                <li>RETI FUSION bez masażu – 150 zł</li>
-                <li>RH+ z masażem – 190 zł </li>
-                <li>RH+ bez masażu – 150 zł</li>
-                <li>PHYTIC – 140 zł</li>
-                <li>FERULAC AGE – 160 zł</li>
-                <li>MASAŻ KLASYCZNY TWARZY, SZYI I DEKOLTU – 60 zł</li>
-                <li>MASAŻ LIFTINGUJĄCY TWARZY, SZYI I DEKOLTU – 80 zł</li>
-              </ul>
-            </span>
-          </div>
-          <div id="p3" class="price_page_3 pgalery">
-              <span class="price_left"><i>100 zł</i>
-             <a>REACTIF bez masażu<br>
-              ACNE LOGIQUE<br>
-              SYN BIOTICbez masażu</a> 
-            </span>
-            <span class="price_right">
-              <ul>
-                <li>REACTIF z masażem – 140</li>
-                <li>REACTIF bez masażu – 100 zł</li>
-                <li>SYN BIOTIC z masażem – 140 zł</li>
-                <li>SYN BIOTIC bez masażu – 100 zł</li>
-                <li>LACTOBIONIQUE z masażem – 160 zł</li>
-                <li>LACTOBIONIQUE bez masażu – 120 zł</li>
-                <li>ACNE LOGIQUE bez masażu – 100 zł</li>
-              </ul>
-            </span>
-          </div>
-          <div id="p4" class="price_page_4 pgalery">
-            <span class="price_left"> <i>40 zł</i>
-              <a>PEELING KAWITACYJNY</a>
-            </span>
-            <span class="price_right">
-              <ul>
-                <li>MIKRODERMABRAZJA – 100 zł</li>
-                <li>MIKRODERMABRAZJA z kwasem migdałowym i algami – 150 zł</li>
-                <li>PEELING KAWITACYJNY – 40 zł</li>
-                <li>KWAS MIGDAŁOWY 50% + PHA pH 1,5 – 80 zł</li>
-                <li>KWAS PIROGRONOWY 35% + kwas mlekowy i azelainowy pH 1,3 – 70 zł</li>
-                <li>KWAS STRIVA-DERM ASP 70% pH 1,5 – 100 zł</li>
-                <li>KWAS SALICYLOWY 30% pH 2,2 – 70 zł</li>
-                <li>KWAS GLIKOLOWY 70% pH 0,8 – 120 </li>
-                <li>RETI FUSION PEEL – SET – 170 zł </li>
-                <li>RETI FUSION PEEL – SET + kwas migdałowy – 190 zł</li>
-                <li>RETI FUSION PEEL – SET poprzedzony kwasem migdałowym – 210 zł</li>
-                <li>PHYTO FENOL PEEL – 230 zł</li>
-              </ul>
-            </span>
-          </div>
-          <div id="p5" class="price_page_5 pgalery">
-              <span class="price_left"> <i>30 zł</i>
-            <a>MANICURE BIOLOGICZNY<br>
-              PARAFINA NA DŁONIE + PEELING DŁONI</a>  
-            </span>
-            <span class="price_right">
-              <ul>
-                <li>MANICURE BIOLOGICZNY - 30zł</li>
-                <li>MANICURE JAPOŃSKI - 50zł</li>
-                <li>MANICURE HYBRYDOWY - 50zł</li>
-                <li>PARAFINA NA DŁONIE + PEELING DŁONI - 30zł</li>
-                <li>PRZEKŁUWANIE USZU - 40zł</li>
-              </ul>
-            </span>
-          </div>
-          <div id="p6" class="price_page_6 pgalery">
-              <span class="price_left"><i>50 zł</i>
-               <a>HYBRYDA PAZNOKCI STÓP</a>
-            </span>
-            <span class="price_right">
-              <ul>
-                <li>PEDICURE STOPY + PAZNOKCIE -60zł</li>
-                <li>PEDICURE STOPY + PAZNOKCIE + LAKIER - 80zł</li>
-                <li>PEDICURE STOPY + HYBRYDA - 100zł</li>
-                <li>HYBRYDA PAZNOKCI STÓP - 50zł</li>
-              </ul>
-            </span>
-          </div>
-          <div id="p7" class="price_page_7 pgalery">
-              <span class="price_left">  <i>30 zł</i>
-              <a>MAKIJAŻ BIZNESOWY</a>
-            </span>
-            <span class="price_right">
-              <ul>
-                <li>WIECZOROWY - 60zł</li>
-                <li>DZIENNY 40zł</li>
-                <li>ŚLUBNY (w tym makijaż próbny) - 140zł</li>
-                <li>BIZNESOWY  - 30zł</li>
-                <li>DO SESJI ZDJĘCIOWEJ - 60zł</li>
-                <li>MAKIJAŻ + KĘPKI RZĘS + 10-20 zł do ceny makijażu</li>
-                <li>MAKIJAŻ + RZĘSY NA PASKU + 30 zł do ceny makijażu</li>
-              </ul>
-            </span>
-          </div>
-          <div id="p1" class="price_page_1 pgalery_default">
-              <span class="price_left"><i>100 zł</i>
-             <a>AQUASTIC bez masażu</a> 
-            </span>
-            <span class="price_right">
-              <ul>
-                <li>JUNGLE z masażem – 160 zł</li>
-                <li>JUNGLE bez masażu – 120 zł</li>
-                <li>CONTRADICTIO z masażem – 160 zł</li>
-                <li>CONTRADICTIO bez masażu – 120 zł</li>
-                <li>COLLAGENIQUE z masażem – 180 zł</li>
-                <li>COLLAGENIQUE bez masażu – 150 zł</li>
-                <li>REVERSO z masażem – 170 zł</li>
-                <li>REVERSO bez masażu – 130 zł</li>
-                <li>VITA FORCE z masażem – 160 zł</li>
-                <li>VITA FORCE bez masaży – 120 zł</li>
-                <li>AQUASTIC z masażem – 140 zł</li>
-                <li>AQUASTIC bez masażu – 100 zł</li>
-              </ul>
-            </span>
-          </div>
-        </div>
+  .main_wraper_text h1 {
+    transform: translate(-70%, 10%);
+  }
 
-      </div>
+  .main_wraper h1 :nth-child(1) {
+    font-size: 15px;
+  }
+
+  .main_wraper h1 :nth-child(2) {
+    transform: translate(40%, 0%);
+    font-size: 30px;
+  }
+
+  .main_wraper h1 :nth-child(3) {
+    margin-top: 18px;
+    font-size: 50px;
+  }
+
+  /************************/
+  /*********O MNIE*********/
+  /************************/
 
 
-    </div>
-  </section>
-  <footer id="footer">
-    <div class="footer_wraper">
-      <div class="footer_adress">
-        <a>Mobilny Gabinet Kosmetyczny aurora</a>
-        <a>ul. Woźniaka 76/10</a>
-        <a>41-902 BYTOM</a>
-      </div>
-      <div class="footer_price">
-        <h1>Dojazd do klienta</h1>
-        <ul>
-          <li>od 2 km do 7 km – 5 zł</li>
-          <li>od 7 km do 15 km – 10 zł</li>
-          <li>od 15 km do 20 km – 20 zł</li>
-          <li>od 20 km do 30 km – 40 zł</li>
-          <li>powyżej 30 km – 50 zł</li>
-        </ul>
+  .about_me_wraper {
+    width: 100%;
+    height: 65vh;
+  }
 
-      </div>
-      <div class="footer_map"><img src="img/mapa.png" alt=""></div>
-      <div class="footer_email">
-        Chcesz o coś zapytać? Masz jakieś wątpliwości?<br>
-        Może chcesz po prostu porozmawiać? <br>Napisz do mnie:
-        <div>
-          <a href="https://www.facebook.com/m.g.k.aurora/" alt_title="https://www.facebook.com/m.g.k.aurora/"><i class="icon-facebook-official"></i></a>
-          <a href="796306342" alt_title="796306342"> <i class="icon-phone"></i></a>
-          <a href="#" alt_title="aurora.gabinet@op.pl"> <i class="icon-mail-alt"></i></a>
-        </div>
-        <div class="footer_email_phone">
-          <a href="https://www.facebook.com/m.g.k.aurora/">  <i class="icon-facebook-official"></i>m.g.k.aurora</a>
-          <a href="796306342" > <i class="icon-phone"></i>796306342</a>
-          <a href="#"> <i class="icon-mail-alt"></i>aurora.gabinet@op.pl</a>
-      </div>
-    </div>
-  </div>
-    <div class="footer_allrights">
-      © 2018 Wszystkie prawa zastrzeżone, AURORA Mobilny Gabinet Kosmeyczny
-    </div>
-  </footer>
-  <script src="scripts/script.js" ></script>
-</body>
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
 
-</html>
+
+  .about_me_main h2 {
+    top: 15%;
+    left: -25%;
+    font-size: 35px;
+  }
+
+  .about_me_img {
+    width: 30vh;
+    height: 90%;
+    transform: translate(-25%, 0%);
+  }
+
+  .about_me_img img {
+    width: 160%;
+    transform: translate(-15%, 0%);
+  }
+
+  .about_me_txt p {
+    font-size: 15px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+
+  /************************/
+  /********GALERIA*********/
+  /************************/
+
+
+  .galery_main h2 {
+    top: 15%;
+    left: -20%;
+    font-size: 35px;
+  }
+
+  .galery_main ul {
+    top: 40%;
+    left: 10%;
+  }
+
+  .galery_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  /************************/
+  /*********USŁUGI*********/
+  /************************/
+
+
+  .serwises_main h2 {
+    top: 15%;
+    left: -20%;
+    font-size: 35px;
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+
+  /************************/
+  /*********CENNIK*********/
+  /************************/
+
+  .price_wraper {
+    margin-top: 0%;
+  }
+
+  .price_main h2 {
+    top: 15%;
+    left: -20%;
+    font-size: 35px;
+  }
+
+  .price_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .price_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .price {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+  }
+
+
+  .price_page_1 span:nth-child(1),
+  .price_page_2 span:nth-child(1),
+  .price_page_3 span:nth-child(1),
+  .price_page_4 span:nth-child(1),
+  .price_page_5 span:nth-child(1),
+  .price_page_6 span:nth-child(1),
+  .price_page_7 span:nth-child(1) {
+    width: 25%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price_page_1 span:nth-child(2),
+  .price_page_2 span:nth-child(2),
+  .price_page_3 span:nth-child(2),
+  .price_page_4 span:nth-child(2),
+  .price_page_5 span:nth-child(2),
+  .price_page_6 span:nth-child(2),
+  .price_page_7 span:nth-child(2) {
+    display: flex;
+  
+    width: 63%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price span ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price span ul li {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+
+
+  .price span i {
+    font-size: 25px;
+  }
+
+  .price span a {
+    margin-top: 10%;
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  /************************/
+  /********STOPKA**********/
+  /************************/
+
+  footer {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+  }
+
+
+  .footer_adress {
+
+    margin-left: 10px;
+    margin-top: 15px;
+    line-height: 20px;
+    flex-basis: 20%;
+    height: auto;
+    text-align: left;
+  }
+
+  .footer_price {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    height: auto;
+    margin: 10px;
+    line-height: 24px;
+  }
+
+  .footer_price h1 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+
+  .footer_price ul {
+    text-align: left;
+    font-size: 12px;
+
+  }
+
+  .footer_email {
+    flex-basis: 30%;
+    margin: 10px 20px 0px 20px;
+    line-height: 20px;
+    height: auto;
+  }
+
+  .footer_email div {
+    margin-top: 40px;
+    letter-spacing: 25px;
+  }
+
+  .footer_email i {
+    font-size: 35px;
+    transition: ease .5s;
+  }
+
+  .footer_email a[Alt_title]:after {
+    font-size: 10px;
+    padding: 2px 4px 2px 8px;
+    bottom: -1.6em;
+    letter-spacing: 3px;
+    left: -150%;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+  }
+
+  .footer_allrights {
+    height: auto;
+  }
+
+  
+
+  .footer_map {
+    flex-basis: 30%;
+    height: auto;
+  }
+
+}
+
+@media all and (min-width: 1070px) and (max-width: 1215px) {
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+
+  nav {
+    flex-basis: 50vw;
+  }
+
+  /************************/
+  /*****STRONA GŁÓWNA******/
+  /************************/
+
+  .main_wraper {
+    height: 60vh;
+    min-height: 500px ;
+  }
+
+  .main_img{
+    width: 40vw;
+       height: 40vw;
+     }
+
+  /* .main_wraper img {
+    max-width: 100%;
+  } */
+
+  .main_wraper div {
+    width: 40%;
+    height: 40%;
+    left: 50%;
+    transform: translate(-40%, 40%);
+    
+  }
+
+  .main_wraper_text h1 {
+    transform: translate(-60%, 20%);
+  }
+
+  .main_wraper h1 :nth-child(1) {
+    font-size: 15px;
+  }
+
+  .main_wraper h1 :nth-child(2) {
+    transform: translate(40%, 0%);
+    font-size: 35px;
+  }
+
+  .main_wraper h1 :nth-child(3) {
+    margin-top: 18px;
+    font-size: 65px;
+  }
+
+  /************************/
+  /*********O MNIE*********/
+  /************************/
+
+
+  .about_me_wraper {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
+
+
+  .about_me_main h2 {
+    top: 15%;
+    left: -20%;
+  }
+
+  .about_me_img {
+    width: 30vh;
+    transform: translate(-30%, 0%);
+  }
+
+  .about_me_img img {
+    width: 160%;
+    transform: translate(-15%, 0%);
+  }
+
+  .about_me_txt p {
+    font-size: 17px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+
+  /************************/
+  /********GALERIA*********/
+  /************************/
+
+
+  .galery_main h2 {
+    top: 15%;
+    left: -20%;
+  }
+
+  .galery_main ul {
+    top: 40%;
+    left: 10%;
+  }
+
+  .galery_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  /************************/
+  /*********USŁUGI*********/
+  /************************/
+
+
+  .serwises_main h2 {
+    top: 15%;
+    left: -20%;
+
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+
+  /************************/
+  /*********CENNIK*********/
+  /************************/
+
+  .price_wraper {
+    margin-top: 0%;
+  }
+
+  .price_main h2 {
+    top: 15%;
+    left: -20%;
+  }
+
+  .price_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .price_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .price {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+  }
+
+
+  .price_page_1 span:nth-child(1),
+  .price_page_2 span:nth-child(1),
+  .price_page_3 span:nth-child(1),
+  .price_page_4 span:nth-child(1),
+  .price_page_5 span:nth-child(1),
+  .price_page_6 span:nth-child(1),
+  .price_page_7 span:nth-child(1) {
+    width: 30%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price_page_1 span:nth-child(2),
+  .price_page_2 span:nth-child(2),
+  .price_page_3 span:nth-child(2),
+  .price_page_4 span:nth-child(2),
+  .price_page_5 span:nth-child(2),
+  .price_page_6 span:nth-child(2),
+  .price_page_7 span:nth-child(2) {
+    display: flex;
+    min-width: 40vh;
+    width: 65%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price span ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price span ul li {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+
+
+  .price span i {
+    font-size: 25px;
+  }
+
+  .price span a {
+    margin-top: 10%;
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  /************************/
+  /********STOPKA**********/
+  /************************/
+
+  footer {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+  }
+
+
+  .footer_adress {
+
+    margin-left: 10px;
+    margin-top: 15px;
+    line-height: 20px;
+    flex-basis: 20%;
+    height: auto;
+    text-align: left;
+  }
+
+  .footer_price {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    height: auto;
+    margin: 10px;
+    line-height: 24px;
+  }
+
+  .footer_price h1 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+
+  .footer_price ul {
+    text-align: left;
+    font-size: 12px;
+
+  }
+
+  .footer_email {
+    flex-basis: 30%;
+    margin: 10px 20px 0px 20px;
+    line-height: 20px;
+    height: auto;
+  }
+
+  .footer_email div {
+    margin-top: 40px;
+    letter-spacing: 25px;
+  }
+
+  .footer_email i {
+    font-size: 50px;
+    
+  }
+
+  .footer_email a[Alt_title]:after {
+    font-size: 10px;
+    padding: 2px 4px 2px 8px;
+    bottom: -1.6em;
+    letter-spacing: 3px;
+    left: -150%;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+  }
+
+  .footer_allrights {
+    height: auto;
+  }
+
+  .footer_map {
+    flex-basis: 30%;
+    height: auto;
+  }
+
+
+}
+
+@media all and (min-width: 1216px) and (max-width: 1407px) {
+
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+  nav {
+    flex-basis: 50vw;
+  }
+
+  /************************/
+  /*****STRONA GŁÓWNA******/
+  /************************/
+
+  .main_wraper {
+    height: 70vh;
+    min-height: 600px ;
+  }
+
+  /* .main_wraper img {
+    max-width: 100%;
+  } */
+
+  .main_img{
+
+    width: 40vw;
+    height: 40vw;
+  }
+
+  .main_wraper div {
+    width: 40%;
+    height: 50%;
+    left: 50%;
+    transform: translate(-40%, 25%);
+  }
+
+  .main_wraper_text h1 {
+    transform: translate(-55%, 40%);
+  }
+
+  .main_wraper h1 :nth-child(1) {
+    font-size: 25px;
+  }
+
+  .main_wraper h1 :nth-child(2) {
+    transform: translate(40%, 0%);
+    font-size: 40px;
+  }
+
+  .main_wraper h1 :nth-child(3) {
+    margin-top: 20px;
+    font-size: 70px;
+  }
+
+  /************************/
+  /*********O MNIE*********/
+  /************************/
+
+
+  .about_me_wraper {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
+
+
+  .about_me_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .about_me_img {
+    width: 35vh;
+    transform: translate(-35%, 0%);
+  }
+
+  .about_me_img img {
+    width: 150%;
+    transform: translate(-13%, 0%);
+  }
+
+  .about_me_txt p {
+    font-size: 17px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+
+  /************************/
+  /********GALERIA*********/
+  /************************/
+
+
+  .galery_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .galery_main ul {
+    top: 40%;
+    left: 10%;
+  }
+
+  .galery_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  /************************/
+  /*********USŁUGI*********/
+  /************************/
+
+
+  .serwises_main h2 {
+    top: 15%;
+    left: -10%;
+
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+
+  /************************/
+  /*********CENNIK*********/
+  /************************/
+
+  .price_wraper {
+    margin-top: 0%;
+  }
+
+  .price_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .price_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .price_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .price {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+  }
+
+
+  .price_page_1 span:nth-child(1),
+  .price_page_2 span:nth-child(1),
+  .price_page_3 span:nth-child(1),
+  .price_page_4 span:nth-child(1),
+  .price_page_5 span:nth-child(1),
+  .price_page_6 span:nth-child(1),
+  .price_page_7 span:nth-child(1) {
+    width: 30%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price_page_1 span:nth-child(2),
+  .price_page_2 span:nth-child(2),
+  .price_page_3 span:nth-child(2),
+  .price_page_4 span:nth-child(2),
+  .price_page_5 span:nth-child(2),
+  .price_page_6 span:nth-child(2),
+  .price_page_7 span:nth-child(2) {
+    display: flex;
+    min-width: 40vh;
+    width: 65%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price span ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price span ul li {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+
+
+  .price span i {
+    font-size: 25px;
+  }
+
+  .price span a {
+    margin-top: 10%;
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  /************************/
+  /********STOPKA**********/
+  /************************/
+
+  footer {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+  }
+
+
+  .footer_adress {
+
+    margin-left: 10px;
+    margin-top: 15px;
+    line-height: 20px;
+    flex-basis: 20%;
+    height: auto;
+    text-align: left;
+  }
+
+  .footer_price {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    height: auto;
+    margin: 10px;
+    line-height: 24px;
+  }
+
+  .footer_price h1 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+
+  .footer_price ul {
+    text-align: left;
+    font-size: 12px;
+
+  }
+
+  .footer_email {
+    flex-basis: 30%;
+    margin: 10px 20px 0px 20px;
+    line-height: 20px;
+    height: auto;
+  }
+
+  .footer_email div {
+    margin-top: 40px;
+    letter-spacing: 25px;
+  }
+
+  .footer_email i {
+    font-size: 60px;
+  }
+
+  .footer_email a[Alt_title]:after {
+    font-size: 10px;
+    padding: 2px 4px 2px 8px;
+    bottom: -1.6em;
+    letter-spacing: 3px;
+    left: -150%;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+  }
+
+  .footer_allrights {
+    height: auto;
+  }
+
+  .footer_map {
+    flex-basis: 30%;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 1408px) and (max-width: 1570px) {
+
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+  nav {
+    flex-basis: 50vw;
+  }
+
+  /************************/
+  /*****STRONA GŁÓWNA******/
+  /************************/
+
+  .main_wraper {
+    height: 75vh;
+    min-height: 700px ;
+  }
+
+  .main_img{
+ width: 40vw;
+    height: 40vw;
+  }
+
+  /* .main_wraper img {
+    max-width: 100%;
+  } */
+
+  .main_wraper div {
+    width: 40%;
+    height: 50%;
+    left: 50%;
+    transform: translate(-40%, 40%);
+    
+  }
+
+  .main_wraper_text h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    transform: translate(-55%, 40%);
+  }
+  
+  .main_wraper h1 :nth-child(1) {
+    font-size: 25px;
+  }
+  
+  .main_wraper h1 :nth-child(2) {
+    transform: translate(40%, 0%);
+    font-size: 45px;
+  }
+  
+  .main_wraper h1 :nth-child(3) {
+    margin-top: 20px;
+    font-size: 75px;
+  }
+  /************************/
+  /*********O MNIE*********/
+  /************************/
+
+
+  .about_me_wraper {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
+
+
+  .about_me_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .about_me_img {
+    width: 40vh;
+    transform: translate(-40%, 0%);
+  }
+
+  .about_me_img img {
+    width: 150%;
+    transform: translate(-13%, 10%);
+  }
+
+  .about_me_txt p {
+    font-size: 17px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+
+  /************************/
+  /********GALERIA*********/
+  /************************/
+
+
+  .galery_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .galery_main ul {
+    top: 40%;
+    left: 10%;
+  }
+
+  .galery_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  /************************/
+  /*********USŁUGI*********/
+  /************************/
+
+
+  .serwises_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 20px;
+
+   
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+
+  /************************/
+  /*********CENNIK*********/
+  /************************/
+
+  .price_wraper {
+    margin-top: 0%;
+  }
+
+  .price_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .price_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .price_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .price {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+  }
+
+
+  .price_page_1 span:nth-child(1),
+  .price_page_2 span:nth-child(1),
+  .price_page_3 span:nth-child(1),
+  .price_page_4 span:nth-child(1),
+  .price_page_5 span:nth-child(1),
+  .price_page_6 span:nth-child(1),
+  .price_page_7 span:nth-child(1) {
+    width: 30%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price_page_1 span:nth-child(2),
+  .price_page_2 span:nth-child(2),
+  .price_page_3 span:nth-child(2),
+  .price_page_4 span:nth-child(2),
+  .price_page_5 span:nth-child(2),
+  .price_page_6 span:nth-child(2),
+  .price_page_7 span:nth-child(2) {
+    display: flex;
+    min-width: 40vh;
+    width: 65%;
+    height: 75vh;
+    margin-left: 10px;
+  }
+
+  .price span ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price span ul li {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+
+
+  .price span i {
+    font-size: 25px;
+  }
+
+  .price span a {
+    margin-top: 10%;
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  /************************/
+  /********STOPKA**********/
+  /************************/
+
+  footer {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+  }
+
+
+  .footer_adress {
+
+    margin-left: 10px;
+    margin-top: 15px;
+    line-height: 20px;
+    flex-basis: 20%;
+    height: auto;
+    text-align: left;
+  }
+
+  .footer_price {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    height: auto;
+    margin: 10px;
+    line-height: 24px;
+  }
+
+  .footer_price h1 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+
+  .footer_price ul {
+    text-align: left;
+    font-size: 12px;
+
+  }
+
+  .footer_email {
+    flex-basis: 30%;
+    margin: 10px 20px 0px 20px;
+    line-height: 20px;
+    height: auto;
+  }
+
+  .footer_email div {
+    margin-top: 40px;
+    letter-spacing: 25px;
+  }
+
+  .footer_email i {
+    font-size: 60px;
+  }
+
+  .footer_email a[Alt_title]:after {
+    font-size: 10px;
+    padding: 2px 4px 2px 8px;
+    bottom: -1.6em;
+    letter-spacing: 3px;
+    left: -150%;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+  }
+
+  .footer_allrights {
+    height: auto;
+  }
+
+  .footer_map {
+    flex-basis: 30%;
+    height: auto;
+  }
+}
