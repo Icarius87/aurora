@@ -1072,7 +1072,7 @@ section {
   .about_me_main {
     margin-left: 0%;
     width: 100%;
-    min-height: 20vh;
+    min-height: 70px;
     height: auto;
   }
 
@@ -1677,8 +1677,8 @@ section {
   .about_me_main {
     margin-left: 0%;
     width: 100%;
-    min-height: 20vh;
     height: auto;
+    min-height: 100px;
   }
 
   .about_me_main h1 {
@@ -2285,6 +2285,7 @@ section {
     margin-left: 0%;
     width: 100%;
     height: 20vh;
+    min-height: 100px;
   }
 
   .about_me_main h1 {
@@ -2373,7 +2374,6 @@ section {
     width: 100%;
     height: auto;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     justify-content: center;
   }
 
