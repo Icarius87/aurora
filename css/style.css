@@ -27,6 +27,11 @@ body {
   background-color: white;
   text-align: center;
   align-items: center;
+  scroll-padding-top: 9.3vh;
+}
+
+html{
+  scroll-padding-top: 9.3vh;
 }
 
 main {
@@ -148,6 +153,7 @@ nav ul li a:hover {
 nav ul li a i {
   font-size: 0px;
 }
+
 
 
 /************************/
@@ -731,6 +737,7 @@ nav ul li a i {
   height: 75vh;
   border: 1px solid #BBBBBB;
   margin-left: 20px;
+  background-color: #d86232;
 }
 
 .price_page_1 span:nth-child(2),
@@ -771,17 +778,17 @@ nav ul li a i {
 }
 
 .price span i {
-  border: 15px solid #d86232;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
   margin-top: 20%;
-  font-size: 30px;
+  font-size: 50px;
+  color: white;
+  font-weight: 700;
   line-height: 110px;
 }
 
 .price span a {
   margin-top: 10%;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 25px;
   line-height: 40px;
 }
@@ -1378,7 +1385,7 @@ section {
   .price_page_6 span:nth-child(1),
   .price_page_7 span:nth-child(1) {
     width: 90vw;
-    height: 10vh;
+    height: auto;
     margin-left: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1417,17 +1424,18 @@ section {
 
 
   .price span i {
-    border: 0px solid #d86232;
-    height: 0px;
-    width: 0px;
-    border-radius: 0%;
-    margin-top: 10px;
-    font-size: 8px;
-    line-height: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    line-height: 15px;
   }
 
   .price span a {
-    font-size: 12px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 15px;
     line-height: 15px;
   }
 
@@ -2021,18 +2029,19 @@ section {
 
 
   .price span i {
-    border: 0px solid #d86232;
-    height: 0px;
-    width: 0px;
-    border-radius: 0%;
-    margin-top: 10px;
-    font-size: 12px;
-    line-height: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 35px;
+    color: white;
+    font-weight: 700;
+    line-height: 15px;
   }
 
   .price span a {
-    font-size: 12px;
-    line-height: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 18px;
+    line-height: 18px;
   }
 
   /************************/
@@ -2623,18 +2632,20 @@ section {
 
 
   .price span i {
-    border: 0px solid #d86232;
-    height: 0px;
-    width: 0px;
-    border-radius: 0%;
-    margin-top: 10px;
-    font-size: 12px;
-    line-height: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    line-height: 15px;
   }
 
   .price span a {
-    font-size: 12px;
-    line-height: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 20px;
+    line-height: 20px;
+
   }
 
   /************************/
@@ -2795,15 +2806,16 @@ section {
   } */
 
   .main_wraper div {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
     left: 50%;
-    transform: translate(-40%, 40%);
+    transform: translate(-25%, 25%);
+    border: solid #d86232 12px;
     
   }
 
   .main_wraper_text h1 {
-    transform: translate(-70%, 10%);
+    transform: translate(-55%, 20%);
   }
 
   .main_wraper h1 :nth-child(1) {
@@ -3041,7 +3053,10 @@ section {
 
 
   .price span i {
-    font-size: 25px;
+    margin-top: 20%;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
   }
 
   .price span a {
@@ -3174,11 +3189,11 @@ section {
   } */
 
   .main_wraper div {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
     left: 50%;
-    transform: translate(-40%, 40%);
-    
+    transform: translate(-25%, 25%);
+    border: solid #d86232 13px;
   }
 
   .main_wraper_text h1 {
@@ -3416,7 +3431,10 @@ section {
 
 
   .price span i {
-    font-size: 25px;
+    margin-top: 20%;
+    font-size: 45px;
+    color: white;
+    font-weight: 700;
   }
 
   .price span a {
@@ -3549,14 +3567,15 @@ section {
   }
 
   .main_wraper div {
-    width: 40%;
+    width: 50%;
     height: 50%;
     left: 50%;
-    transform: translate(-40%, 25%);
+    transform: translate(-25%, 25%);
+    border: solid #d86232 14px;
   }
 
   .main_wraper_text h1 {
-    transform: translate(-55%, 40%);
+    transform: translate(-50%, 20%);
   }
 
   .main_wraper h1 :nth-child(1) {
@@ -3790,7 +3809,10 @@ section {
 
 
   .price span i {
-    font-size: 25px;
+    margin-top: 20%;
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
   }
 
   .price span a {
@@ -3919,10 +3941,10 @@ section {
   } */
 
   .main_wraper div {
-    width: 40%;
+    width: 50%;
     height: 50%;
     left: 50%;
-    transform: translate(-40%, 40%);
+    transform: translate(-25%, 25%);
     
   }
 
@@ -3930,7 +3952,7 @@ section {
     display: flex;
     flex-direction: column;
     text-align: start;
-    transform: translate(-55%, 40%);
+    transform: translate(-55%, 20%);
   }
   
   .main_wraper h1 :nth-child(1) {
@@ -4162,7 +4184,10 @@ section {
 
 
   .price span i {
-    font-size: 25px;
+    margin-top: 20%;
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
   }
 
   .price span a {
