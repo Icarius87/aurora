@@ -1,0 +1,889 @@
+.serwises {
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.serwises_wraper {
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.serwises_main {
+  position: relative;
+  display: flex;
+  background-color: var(--bg_secondary_dark);
+  width: 25vw;
+  height: 80vh;
+}
+
+
+.serwises_main h2 {
+  vertical-align: bottom;
+  top: 15%;
+  left: -10%;
+  font-size: 40px;
+  transform: rotate(-90deg);
+  letter-spacing: 10px;
+  font-weight: 700;
+  color: #3C3C3C;
+  position: absolute;
+}
+
+.serwises_main ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  list-style-type: none;
+}
+
+
+.serwises_main ul li a {
+  display: flex;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.serwises_main ul li a:hover {
+  color: var(--bg_adds);
+}
+
+.serwises {
+  display: flex;
+  width: 75vw;
+  height: 80vh;
+
+}
+
+.serwises_page_1,
+.serwises_page_2,
+.serwises_page_3,
+.serwises_page_4,
+.serwises_page_5,
+.serwises_page_6,
+.serwises_page_7 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  font-size: 16px;
+  text-transform: none;
+  justify-content: space-around;
+  align-content: space-around;
+  text-align: justify;
+}
+
+.serwises_page_1 h1,
+.serwises_page_2 h1,
+.serwises_page_3 h1,
+.serwises_page_4 h1,
+.serwises_page_5 h1,
+.serwises_page_6 h1,
+.serwises_page_7 h1 {
+  height: 5vh;
+  width: 50vw;
+  font-size: 20px;
+  text-align: center;
+}
+
+.serwises_page_1 span,
+.serwises_page_2 span,
+.serwises_page_3 span,
+.serwises_page_4 span,
+.serwises_page_5 span,
+.serwises_page_6 span,
+.serwises_page_7 span {
+  display: flex;
+  font-size: 14px;
+  width: 30%;
+  height: 25%;
+  background-color: #BBBBBB;
+  padding: 15px;
+  line-height: 25px;
+  transform: scale(1, 1);
+  text-align: left;
+  overflow: hidden;
+  z-index: 80;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.serwises_page_1 span h1,
+.serwises_page_2 span h1,
+.serwises_page_3 span h1,
+.serwises_page_4 span h1,
+.serwises_page_5 span h1,
+.serwises_page_6 span h1,
+.serwises_page_7 span h1 {
+  color: var(--bg_adds);
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--bg_adds);
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.serwises_page_1 span i,
+.serwises_page_2 span i,
+.serwises_page_3 span i,
+.serwises_page_4 span i,
+.serwises_page_5 span i,
+.serwises_page_6 span i,
+.serwises_page_7 span i {
+  color: var(--bg_adds);
+  text-align: end;
+  font-size: 18px;
+  margin-top: 10px;
+
+}
+
+
+.serwises_page_1 span:hover,
+.serwises_page_2 span:hover,
+.serwises_page_3 span:hover,
+.serwises_page_4 span:hover,
+.serwises_page_5 span:hover,
+.serwises_page_6 span:hover,
+.serwises_page_7 span:hover {
+  cursor: pointer;
+  overflow: visible;
+  z-index: 81;
+  transition: all ease 0.3s;
+}
+
+
+.serwises_page_1 span:after,
+.serwises_page_2 span:after,
+.serwises_page_3 span:after,
+.serwises_page_4 span:after,
+.serwises_page_5 span:after,
+.serwises_page_6 span:after,
+.serwises_page_7 span:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: all ease 0.5s;
+  box-shadow: inset 0px -44px 30px -15px rgba(129, 66, 30, 0.10);
+}
+
+
+
+.serwises_page_1 span:hover:after,
+.serwises_page_2 span:hover:after,
+.serwises_page_3 span:hover:after,
+.serwises_page_4 span:hover:after,
+.serwises_page_5 span:hover:after,
+.serwises_page_6 span:hover:after,
+.serwises_page_7 span:hover:after {
+  width: 100%;
+  height: 220%;
+  overflow: visible;
+  transform-origin: top;
+  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+/************************/
+/******menu usługi*******/
+/************************/
+
+/* This hides all pages */
+.sgalery {
+  display: none;
+}
+
+/* This displays the first page */
+.sgalery_default {
+  display: flex;
+}
+
+/* This displays the page corresponding to the one you clicked on */
+:target {
+  display: flex;
+}
+
+/* This hides the default page when another page is clicked */
+:target~.sgalery_default {
+  display: none;
+}
+
+
+
+
+
+
+
+@media all and (min-width: 100px) and (max-width: 300px) {
+
+  .serwises_wraper {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .serwises {
+    width: 100%;
+    height: auto;
+  }
+
+  .serwises_main {
+    width: 100%;
+    height: 230px;
+  }
+
+  .serwises_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .serwises_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 40%;
+    font-size: 30px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .serwises_main ul {
+    flex-direction: column;
+    top: 35%;
+    left: 5%;
+  }
+
+  .serwises_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 8px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 12px;
+    width: 70%;
+    height: 130px;
+    padding: 5px;
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    font-size: 12px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+}
+
+@media all and (min-width: 301px) and (max-width: 590px) {
+
+  .serwises_wraper {
+    margin-top: 15px;
+    width: 100%;
+    ;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .serwises {
+    width: 100%;
+    height: auto;
+  }
+
+  .serwises_main {
+    width: 100%;
+    height: 230px;
+  }
+
+  .serwises_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .serwises_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 50%;
+    font-size: 35px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .serwises_main ul {
+    flex-direction: column;
+    top: 35%;
+    left: 5%;
+  }
+
+  .serwises_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 8px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 12px;
+    width: 70%;
+    height: 130px;
+    padding: 5px;
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    font-size: 12px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+}
+
+@media all and (min-width: 591px) and (max-width: 785px) {
+
+
+  .serwises_wraper {
+    margin-top: 15px;
+    width: 100%;
+    ;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .serwises {
+    width: 100%;
+    height: auto;
+  }
+
+  .serwises_main {
+    width: 100%;
+    height: 230px;
+  }
+
+  .serwises_main h1 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .serwises_main h2 {
+    vertical-align: initial;
+    top: 10%;
+    left: 50%;
+    font-size: 40px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .serwises_main ul {
+    flex-direction: column;
+    top: 35%;
+    left: 5%;
+  }
+
+  .serwises_main ul li a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 8px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 12px;
+    width: 70%;
+    height: 130px;
+    padding: 5px;
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    font-size: 12px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+}
+
+@media all and (min-width: 786px) and (max-width: 1069px) {
+
+  .serwises_main h2 {
+    top: 15%;
+    left: -20%;
+    font-size: 35px;
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+}
+
+@media all and (min-width: 1070px) and (max-width: 1215px) {
+
+
+  .serwises_main h2 {
+    top: 15%;
+    left: -20%;
+
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+}
+
+@media all and (min-width: 1216px) and (max-width: 1407px) {
+
+  .serwises_main h2 {
+    top: 15%;
+    left: -10%;
+
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+}
+
+@media all and (min-width: 1408px) and (max-width: 1570px) {
+
+  .serwises_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .serwises_main ul {
+    left: 10%;
+    text-align: left;
+  }
+
+
+  .serwises_main ul li a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+
+  .serwises_page_1,
+  .serwises_page_2,
+  .serwises_page_3,
+  .serwises_page_4,
+  .serwises_page_5,
+  .serwises_page_6,
+  .serwises_page_7 {
+    font-size: 14px;
+  }
+
+  .serwises_page_1 h1,
+  .serwises_page_2 h1,
+  .serwises_page_3 h1,
+  .serwises_page_4 h1,
+  .serwises_page_5 h1,
+  .serwises_page_6 h1,
+  .serwises_page_7 h1 {
+    height: 3vh;
+    font-size: 20px;
+
+
+  }
+
+  .serwises_page_1 span,
+  .serwises_page_2 span,
+  .serwises_page_3 span,
+  .serwises_page_4 span,
+  .serwises_page_5 span,
+  .serwises_page_6 span,
+  .serwises_page_7 span {
+    font-size: 14px;
+    width: 31%;
+    height: 27%;
+    padding: 10px;
+    line-height: 21px;
+    text-align: justify;
+  }
+
+  .serwises_page_1 span h1,
+  .serwises_page_2 span h1,
+  .serwises_page_3 span h1,
+  .serwises_page_4 span h1,
+  .serwises_page_5 span h1,
+  .serwises_page_6 span h1,
+  .serwises_page_7 span h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .serwises_page_1 span i,
+  .serwises_page_2 span i,
+  .serwises_page_3 span i,
+  .serwises_page_4 span i,
+  .serwises_page_5 span i,
+  .serwises_page_6 span i,
+  .serwises_page_7 span i {
+    font-size: 16px;
+  }
+
+}

@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h2{
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  display: flex;
+  width: 1571px;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 40px;
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  scroll-padding-top: 9.3vh;
+  --bg_primary:  white;
+--bg_secondary_light: grey;
+--bg_secondary_dark:#252525;
+--bg_adds:  #a56f0c;
+--bg_adds70:  #a56f0c28;
+}
+
+html{
+  scroll-padding-top: 9.3vh;
+}
+
+main {
+  display: flex;
+  width: 90%;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  flex-grow: 1;
+  background-color: var(--bg_primary);
+  justify-items: center;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  overflow: hidden;
+}
+
+aside {
+  background-color: var(--bg_primary);
+  flex-basis: 15%;
+  margin: 1%;
+}
+
+aside img {
+  background-color: var(--bg_primary);
+  max-width: 100%;
+  width: 100%;
+}
+
+.hamburger{
+display: none;
+}
+
+.altLogo {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  background-color: var(--bg_primary);
+  margin-left: 15%;
+  align-items: center;
+}
+
+@media all and (min-width: 100px) and (max-width: 300px)  {
+  body {
+    width: 100%;
+    font-size: 6px;
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+    height: 50px;
+  }
+
+  
+section {
+  width: 100%;
+}
+
+  aside {
+    margin: 0%;
+  }
+
+  aside img {
+    max-width: 50%;
+    width: 50%;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 20px;
+    }
+
+  nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: 0%;
+    width: 100%;
+    top: -270px;
+    align-items: center;
+    transition: .2s linear;
+    z-index: -10;
+  }
+}
+@media all and (min-width: 301px) and (max-width: 590px)  {
+  body {
+    width: 100%;
+    font-size: 6px;
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+    height: 80px;
+  }
+
+  
+section {
+  width: 100%;
+}
+
+  aside {
+    margin: 0%;
+  }
+
+  aside img {
+    max-width: 50%;
+    width: 50%;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 20px;
+    }
+
+  nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: 0%;
+    width: 100%;
+    top: -270px;
+    align-items: center;
+    transition: .2s linear;
+    z-index: -10;
+  }
+}
+@media all and (min-width: 591px) and (max-width: 785px) {
+
+  body {
+    width: 100%;
+    font-size: 6px;
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+    height: 100px;
+  }
+
+  
+section {
+  width: 100%;
+}
+
+  aside {
+    margin: 0%;
+  }
+
+  aside img {
+    max-width: 50%;
+    width: 50%;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 25px;
+    }
+
+  nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: 0%;
+    width: 100%;
+    top: -270px;
+    align-items: center;
+    transition: .2s linear;
+    z-index: -10;
+  }
+}
+@media all and (min-width: 786px) and (max-width: 1069px) {
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+
+  nav {
+    flex-basis: 50vw;
+  }
+}
+@media all and (min-width: 1070px) and (max-width: 1215px) {
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+
+  nav {
+    flex-basis: 50vw;
+  }
+}
+@media all and (min-width: 1216px) and (max-width: 1407px) {
+
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+  nav {
+    flex-basis: 50vw;
+  }
+
+}
+@media all and (min-width: 1408px) and (max-width: 1570px) {
+
+  body {
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  aside img {
+    max-width: 100%;
+  }
+  nav {
+    flex-basis: 50vw;
+  }
+
+}
+

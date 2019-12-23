@@ -1,0 +1,407 @@
+
+#about_me {
+  display: flex;
+}
+
+.about_me_wraper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 70vh;
+  color: #3C3C3C;
+  z-index: 90;
+  justify-content: flex-start;
+  align-self: flex-end;
+
+}
+
+.about_me_main {
+  position: relative;
+  display: flex;
+  background-color: var(--bg_secondary_dark);
+  margin-left: 1%;
+  width: 25vw;
+  height: 100%;
+}
+
+.about_me_main h2 {
+  vertical-align: bottom;
+  top: 15%;
+  left: -10%;
+  font-size: 40px;
+  transform: rotate(-90deg);
+  letter-spacing: 10px;
+  font-weight: 700;
+  color: #3C3C3C;
+  position: absolute;
+}
+
+.about_me_img {
+  display: flex;
+  background-color: #DFDFDF;
+  height: 60vh;
+  width: 50vh;
+  transform: translate(-35%, 0%);
+  overflow: hidden;
+}
+
+.about_me_img img {
+  position: absolute;
+  bottom: 0;
+  width: 120%;
+  height: auto;
+  transform: translate(-5%, 10%);
+}
+
+.about_me_txt {
+  text-align: left;
+  width: 60%;
+  text-transform: none;
+  color: #BBBBBB;
+  transform: translate(-10%, 0%);
+}
+
+.about_me_txt p {
+  text-align: left;
+  width: 70%;
+  font-size: 18px;
+  text-transform: none;
+  color: #BBBBBB;
+}
+
+.about_me_txt h1 {
+
+  text-align: left;
+  font-size: 20px;
+  color: #252525;
+}
+
+@media all and (min-width: 100px) and (max-width: 300px)  {
+
+  #about_me {
+    display: flex;
+  }
+
+  .about_me_wraper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about_me_main {
+    margin-left: 0%;
+    width: 100%;
+    min-height: 70px;
+    height: auto;
+  }
+
+  .about_me_main h1 {
+    font-size: 40px;
+    top: 35%;
+    left: 30%;
+  }
+
+  .about_me_main h2 {
+    vertical-align: initial;
+    top: 20%;
+    left: 40%;
+    font-size: 30px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .about_me_img {
+    display: none;
+  }
+
+  .about_me_txt {
+    margin-top: 10px;
+    width: 80%;
+    transform: translate(0%, 0%);
+  }
+
+  .about_me_txt p {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .about_me_txt h1 {
+    font-size: 0px;
+    margin: 10px;
+  }
+
+}
+@media all and (min-width: 301px) and (max-width: 590px)  {
+  #about_me {
+    display: flex;
+  }
+
+  .about_me_wraper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about_me_main {
+    margin-left: 0%;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+  }
+
+  .about_me_main h1 {
+    font-size: 40px;
+    top: 35%;
+    left: 30%;
+  }
+
+  .about_me_main h2 {
+    vertical-align: initial;
+    top: 35%;
+    left: 50%;
+    font-size: 35px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .about_me_img {
+    display: none;
+  }
+
+  .about_me_txt {
+    margin-top: 10px;
+    width: 80%;
+    transform: translate(0%, 0%);
+  }
+
+  .about_me_txt p {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .about_me_txt h1 {
+    font-size: 0px;
+    margin: 10px;
+  }
+}
+@media all and (min-width: 591px) and (max-width: 785px) {
+
+  #about_me {
+    display: flex;
+  }
+
+  .about_me_wraper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about_me_main {
+    margin-left: 0%;
+    width: 100%;
+    height: 20vh;
+    min-height: 100px;
+  }
+
+  .about_me_main h1 {
+    font-size: 40px;
+    top: 35%;
+    left: 30%;
+  }
+
+  .about_me_main h2 {
+    vertical-align: initial;
+    top: 35%;
+    left: 50%;
+    font-size: 40px;
+    transform: rotate(0deg);
+    letter-spacing: 5px;
+  }
+
+  .about_me_img {
+    display: none;
+  }
+
+  .about_me_txt {
+    margin-top: 10px;
+    width: 80%;
+    transform: translate(0%, 0%);
+  }
+
+  .about_me_txt p {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .about_me_txt h1 {
+    font-size: 0px;
+    margin: 10px;
+  }
+
+}
+@media all and (min-width: 786px) and (max-width: 1069px) {
+  .about_me_wraper {
+    width: 100%;
+    height: 65vh;
+  }
+
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
+
+
+  .about_me_main h2 {
+    top: 15%;
+    left: -25%;
+    font-size: 35px;
+  }
+
+  .about_me_img {
+    width: 30vh;
+    height: 90%;
+    transform: translate(-25%, 0%);
+  }
+
+  .about_me_img img {
+    width: 160%;
+    transform: translate(-15%, 0%);
+  }
+
+  .about_me_txt p {
+    font-size: 15px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+
+}
+@media all and (min-width: 1070px) and (max-width: 1215px) {
+
+  .about_me_wraper {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
+
+
+  .about_me_main h2 {
+    top: 15%;
+    left: -20%;
+  }
+
+  .about_me_img {
+    width: 30vh;
+    transform: translate(-30%, 0%);
+  }
+
+  .about_me_img img {
+    width: 160%;
+    transform: translate(-15%, 0%);
+  }
+
+  .about_me_txt p {
+    font-size: 17px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+
+}
+@media all and (min-width: 1216px) and (max-width: 1407px) {
+
+  .about_me_wraper {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
+
+
+  .about_me_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .about_me_img {
+    width: 35vh;
+    transform: translate(-35%, 0%);
+  }
+
+  .about_me_img img {
+    width: 150%;
+    transform: translate(-13%, 0%);
+  }
+
+  .about_me_txt p {
+    font-size: 17px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 1408px) and (max-width: 1570px) {
+
+  .about_me_wraper {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .about_me_main {
+    margin-left: 1%;
+    width: 20vw;
+    height: 100%;
+  }
+
+
+  .about_me_main h2 {
+    top: 15%;
+    left: -10%;
+  }
+
+  .about_me_img {
+    width: 40vh;
+    transform: translate(-40%, 0%);
+  }
+
+  .about_me_img img {
+    width: 150%;
+    transform: translate(-13%, 10%);
+  }
+
+  .about_me_txt p {
+    font-size: 17px;
+    width: 70%;
+  }
+
+  .about_me_txt h1 {
+    font-size: 18px;
+  }
+
+}
+
