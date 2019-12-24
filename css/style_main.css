@@ -92,6 +92,7 @@ nav {
   main {
     flex-direction: column;
     height: 50px;
+    width: 100%;
   }
 
   
@@ -137,6 +138,7 @@ section {
   main {
     flex-direction: column;
     height: 80px;
+    width: 100%;
   }
 
   
@@ -183,6 +185,7 @@ section {
   main {
     flex-direction: column;
     height: 100px;
+    width: 100%;
   }
 
   
