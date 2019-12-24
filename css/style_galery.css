@@ -78,6 +78,7 @@
   width: 33%;
   height: 33%;
   background-color: #BBBBBB;
+  transition: 0.2s linear;
 }
 
   .galery_page_1 span img,
@@ -86,8 +87,94 @@
   .galery_page_4 span img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
+  transition: 0.2s linear;
   }
+
+  .galery_page_1 span:hover,
+  .galery_page_2 span:hover,
+  .galery_page_3 span:hover,
+  .galery_page_4 span:hover {
+  transform: scale(3);
+  background-color: transparent;
+ 
+  }
+
+  .galery_page_1 span img:hover,
+  .galery_page_2 span img:hover,
+  .galery_page_3 span img:hover,
+  .galery_page_4 span img:hover {
+    object-fit: scale-down;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+/********************************/
+/******WYŚWIETLANIE GALERII******/
+/********************************/ 
+
+  .galery_page_1 span:nth-child(1),
+  .galery_page_2 span:nth-child(1),
+  .galery_page_3 span:nth-child(1),
+  .galery_page_4 span:nth-child(1){
+    transform-origin: top left;
+  }
+
+  .galery_page_1 span:nth-child(2),
+  .galery_page_2 span:nth-child(2),
+  .galery_page_3 span:nth-child(2),
+  .galery_page_4 span:nth-child(2){
+    transform-origin: top ;
+  }
+
+  .galery_page_1 span:nth-child(3),
+  .galery_page_2 span:nth-child(3),
+  .galery_page_3 span:nth-child(3),
+  .galery_page_4 span:nth-child(3){
+    transform-origin: top right;
+  }
+
+  .galery_page_1 span:nth-child(4),
+  .galery_page_2 span:nth-child(4),
+  .galery_page_3 span:nth-child(4),
+  .galery_page_4 span:nth-child(4){
+    transform-origin: left;
+  }
+
+  .galery_page_1 span:nth-child(5),
+  .galery_page_2 span:nth-child(5),
+  .galery_page_3 span:nth-child(5),
+  .galery_page_4 span:nth-child(5){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(6),
+  .galery_page_2 span:nth-child(6),
+  .galery_page_3 span:nth-child(6),
+  .galery_page_4 span:nth-child(6){
+    transform-origin: right;
+  }
+
+  .galery_page_1 span:nth-child(7),
+  .galery_page_2 span:nth-child(7),
+  .galery_page_3 span:nth-child(7),
+  .galery_page_4 span:nth-child(7){
+    transform-origin: bottom left;
+  }
+
+  .galery_page_1 span:nth-child(8),
+  .galery_page_2 span:nth-child(8),
+  .galery_page_3 span:nth-child(8),
+  .galery_page_4 span:nth-child(8){
+    transform-origin: bottom;
+  }
+
+  .galery_page_1 span:nth-child(9),
+  .galery_page_2 span:nth-child(9),
+  .galery_page_3 span:nth-child(9),
+  .galery_page_4 span:nth-child(9){
+    transform-origin: bottom right;
+  }
+
 
 /************************/
 /******menu galeria******/
@@ -187,6 +274,82 @@
     background-color: #BBBBBB;
   }
 
+  .galery_page_1 span:hover,
+  .galery_page_2 span:hover,
+  .galery_page_3 span:hover,
+  .galery_page_4 span:hover {
+  transform: scale(1.7);
+  }
+
+  /********************************/
+/******WYŚWIETLANIE GALERII******/
+/********************************/ 
+
+  .galery_page_1 span:nth-child(1),
+  .galery_page_2 span:nth-child(1),
+  .galery_page_3 span:nth-child(1),
+  .galery_page_4 span:nth-child(1){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(2),
+  .galery_page_2 span:nth-child(2),
+  .galery_page_3 span:nth-child(2),
+  .galery_page_4 span:nth-child(2){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(3),
+  .galery_page_2 span:nth-child(3),
+  .galery_page_3 span:nth-child(3),
+  .galery_page_4 span:nth-child(3){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(4),
+  .galery_page_2 span:nth-child(4),
+  .galery_page_3 span:nth-child(4),
+  .galery_page_4 span:nth-child(4){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(5),
+  .galery_page_2 span:nth-child(5),
+  .galery_page_3 span:nth-child(5),
+  .galery_page_4 span:nth-child(5){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(6),
+  .galery_page_2 span:nth-child(6),
+  .galery_page_3 span:nth-child(6),
+  .galery_page_4 span:nth-child(6){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(7),
+  .galery_page_2 span:nth-child(7),
+  .galery_page_3 span:nth-child(7),
+  .galery_page_4 span:nth-child(7){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(8),
+  .galery_page_2 span:nth-child(8),
+  .galery_page_3 span:nth-child(8),
+  .galery_page_4 span:nth-child(8){
+    transform-origin: center;
+  }
+
+  .galery_page_1 span:nth-child(9),
+  .galery_page_2 span:nth-child(9),
+  .galery_page_3 span:nth-child(9),
+  .galery_page_4 span:nth-child(9){
+    transform-origin: center;
+  }
+
+
+
 }
 
 @media all and (min-width: 301px) and (max-width: 590px)  {
@@ -263,6 +426,80 @@
     background-color: #BBBBBB;
   }
 
+  .galery_page_1 span:hover,
+  .galery_page_2 span:hover,
+  .galery_page_3 span:hover,
+  .galery_page_4 span:hover {
+  transform: scale(1.7);
+  }
+
+    /********************************/
+/******WYŚWIETLANIE GALERII******/
+/********************************/ 
+
+.galery_page_1 span:nth-child(1),
+.galery_page_2 span:nth-child(1),
+.galery_page_3 span:nth-child(1),
+.galery_page_4 span:nth-child(1){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(2),
+.galery_page_2 span:nth-child(2),
+.galery_page_3 span:nth-child(2),
+.galery_page_4 span:nth-child(2){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(3),
+.galery_page_2 span:nth-child(3),
+.galery_page_3 span:nth-child(3),
+.galery_page_4 span:nth-child(3){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(4),
+.galery_page_2 span:nth-child(4),
+.galery_page_3 span:nth-child(4),
+.galery_page_4 span:nth-child(4){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(5),
+.galery_page_2 span:nth-child(5),
+.galery_page_3 span:nth-child(5),
+.galery_page_4 span:nth-child(5){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(6),
+.galery_page_2 span:nth-child(6),
+.galery_page_3 span:nth-child(6),
+.galery_page_4 span:nth-child(6){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(7),
+.galery_page_2 span:nth-child(7),
+.galery_page_3 span:nth-child(7),
+.galery_page_4 span:nth-child(7){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(8),
+.galery_page_2 span:nth-child(8),
+.galery_page_3 span:nth-child(8),
+.galery_page_4 span:nth-child(8){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(9),
+.galery_page_2 span:nth-child(9),
+.galery_page_3 span:nth-child(9),
+.galery_page_4 span:nth-child(9){
+  transform-origin: center;
+}
+
 }
 
 @media all and (min-width: 591px) and (max-width: 785px) {
@@ -338,6 +575,80 @@
     margin-top: 5px;
     background-color: #BBBBBB;
   }
+
+  .galery_page_1 span:hover,
+  .galery_page_2 span:hover,
+  .galery_page_3 span:hover,
+  .galery_page_4 span:hover {
+  transform: scale(1.7);
+  }
+
+    /********************************/
+/******WYŚWIETLANIE GALERII******/
+/********************************/ 
+
+.galery_page_1 span:nth-child(1),
+.galery_page_2 span:nth-child(1),
+.galery_page_3 span:nth-child(1),
+.galery_page_4 span:nth-child(1){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(2),
+.galery_page_2 span:nth-child(2),
+.galery_page_3 span:nth-child(2),
+.galery_page_4 span:nth-child(2){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(3),
+.galery_page_2 span:nth-child(3),
+.galery_page_3 span:nth-child(3),
+.galery_page_4 span:nth-child(3){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(4),
+.galery_page_2 span:nth-child(4),
+.galery_page_3 span:nth-child(4),
+.galery_page_4 span:nth-child(4){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(5),
+.galery_page_2 span:nth-child(5),
+.galery_page_3 span:nth-child(5),
+.galery_page_4 span:nth-child(5){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(6),
+.galery_page_2 span:nth-child(6),
+.galery_page_3 span:nth-child(6),
+.galery_page_4 span:nth-child(6){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(7),
+.galery_page_2 span:nth-child(7),
+.galery_page_3 span:nth-child(7),
+.galery_page_4 span:nth-child(7){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(8),
+.galery_page_2 span:nth-child(8),
+.galery_page_3 span:nth-child(8),
+.galery_page_4 span:nth-child(8){
+  transform-origin: center;
+}
+
+.galery_page_1 span:nth-child(9),
+.galery_page_2 span:nth-child(9),
+.galery_page_3 span:nth-child(9),
+.galery_page_4 span:nth-child(9){
+  transform-origin: center;
+}
 }
 
 @media all and (min-width: 786px) and (max-width: 1069px) {

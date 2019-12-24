@@ -62,7 +62,7 @@
 }
 
 .about_me_txt p {
-  text-align: left;
+  text-align: justify;
   width: 70%;
   font-size: 18px;
   text-transform: none;
