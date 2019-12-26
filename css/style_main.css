@@ -82,6 +82,7 @@ nav {
   align-items: center;
 }
 
+
 @media all and (min-width: 100px) and (max-width: 300px)  {
   body {
     width: 100%;
