@@ -1,3 +1,5 @@
+function atload() {dom_rdy()}window.onload=atload;
+
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector("nav");
 
