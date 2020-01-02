@@ -98,7 +98,7 @@
  
   }
 
-  .picUp
+  .makePictureBigger
  {
   transform: scale(3);
   }
@@ -288,17 +288,11 @@
     background-color: #BBBBBB;
   }
 
-  .picUp
+  .makePictureBigger
  {
   transform: scale(2);
   }
 
-  /* .galery_page_1 span:hover,
-  .galery_page_2 span:hover,
-  .galery_page_3 span:hover,
-  .galery_page_4 span:hover {
-  transform: scale(2);
-  } */
 
   /********************************/
 /******WYŚWIETLANIE GALERII******/
@@ -445,17 +439,10 @@
     background-color: #BBBBBB;
   }
 
-  .picUp
-  {
-   transform: scale(2);
-   }
-
-  /* .galery_page_1 span:hover,
-  .galery_page_2 span:hover,
-  .galery_page_3 span:hover,
-  .galery_page_4 span:hover {
-    transform: scale(2);
-  } */
+  .makePictureBigger
+ {
+  transform: scale(2);
+  }
 
     /********************************/
 /******WYŚWIETLANIE GALERII******/
@@ -600,17 +587,10 @@
     background-color: #BBBBBB;
   }
 
-  .picUp
-  {
-   transform: scale(2);
-   }
-
-  /* .galery_page_1 span:hover,
-  .galery_page_2 span:hover,
-  .galery_page_3 span:hover,
-  .galery_page_4 span:hover {
-    transform: scale(2);
-  } */
+  .makePictureBigger
+ {
+  transform: scale(2);
+  }
 
     /********************************/
 /******WYŚWIETLANIE GALERII******/
