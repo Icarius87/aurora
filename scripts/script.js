@@ -11,7 +11,7 @@ nav.classList.toggle("on");
 
 var pictureGaleryToggle = document.getElementsByClassName("galeryPictures");
 function scalePicture(){
-    this.classList.toggle('picUp');
+    this.classList.toggle('makePictureBigger');
 }
 var i;
 function addClickToPhoto(){
