@@ -9,15 +9,15 @@ nav.classList.toggle("on");
 
 })
 
-var fotka = document.getElementsByClassName("galeryPictures");
+var pictureGaleryToggle = document.getElementsByClassName("galeryPictures");
 function scalePicture(){
     this.classList.toggle('picUp');
 }
 var i;
-function powFot(){
-    for(i = 0; i < fotka.length; i++) {
-        fotka[i].addEventListener('click',scalePicture);
+function addClickToPhoto(){
+    for(i = 0; i < pictureGaleryToggle.length; i++) {
+        pictureGaleryToggle[i].addEventListener('click',scalePicture);
       } 
 }
 
-powFot();
+addClickToPhoto();
