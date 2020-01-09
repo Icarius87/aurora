@@ -107,10 +107,11 @@
 .serwises_page_7 span {
   display: flex;
   font-size: 14px;
-  width: 30%;
-  height: 25%;
+  width: 32%;
+  height: 30%;
   background-color: #BBBBBB;
   padding: 15px;
+  /* padding-top: 5%; */
   line-height: 25px;
   transform: scale(1, 1);
   text-align: left;
@@ -118,6 +119,8 @@
   z-index: 80;
   flex-direction: column;
   text-align: justify;
+  border-bottom: 1px solid var(--bg_adds);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .serwises_page_1 span h1,
@@ -128,8 +131,9 @@
 .serwises_page_6 span h1,
 .serwises_page_7 span h1 {
   color: var(--bg_adds);
+  font-size: 16px;
   margin-bottom: 4px;
-  border-bottom: 1px solid var(--bg_adds);
+  /* border-bottom: 1px solid var(--bg_adds); */
   width: 100%;
   text-align: left;
   margin-bottom: 20px;
@@ -625,9 +629,10 @@
   .serwises_page_5 span h1,
   .serwises_page_6 span h1,
   .serwises_page_7 span h1 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: left;
     font-size: 14px;
+    line-height: 15px;
   }
 
   .serwises_page_1 span i,
@@ -637,7 +642,7 @@
   .serwises_page_5 span i,
   .serwises_page_6 span i,
   .serwises_page_7 span i {
-    font-size: 16px;
+    font-size: 14px;
   }
 
 }
@@ -708,9 +713,10 @@
   .serwises_page_5 span h1,
   .serwises_page_6 span h1,
   .serwises_page_7 span h1 {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     text-align: left;
     font-size: 14px;
+    line-height: 15px;
   }
 
   .serwises_page_1 span i,
@@ -720,7 +726,7 @@
   .serwises_page_5 span i,
   .serwises_page_6 span i,
   .serwises_page_7 span i {
-    font-size: 16px;
+    font-size: 14px;
   }
 
 }
@@ -790,9 +796,10 @@
   .serwises_page_5 span h1,
   .serwises_page_6 span h1,
   .serwises_page_7 span h1 {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     text-align: left;
     font-size: 14px;
+    line-height: 15px;
   }
 
   .serwises_page_1 span i,
@@ -802,7 +809,7 @@
   .serwises_page_5 span i,
   .serwises_page_6 span i,
   .serwises_page_7 span i {
-    font-size: 16px;
+    font-size: 14px;
   }
 
 }
@@ -845,8 +852,6 @@
   .serwises_page_7 h1 {
     height: 3vh;
     font-size: 20px;
-
-
   }
 
   .serwises_page_1 span,
@@ -871,9 +876,10 @@
   .serwises_page_5 span h1,
   .serwises_page_6 span h1,
   .serwises_page_7 span h1 {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     text-align: left;
     font-size: 14px;
+    line-height: 15px;
   }
 
   .serwises_page_1 span i,
@@ -883,7 +889,7 @@
   .serwises_page_5 span i,
   .serwises_page_6 span i,
   .serwises_page_7 span i {
-    font-size: 16px;
+    font-size: 14px;
   }
 
 }
